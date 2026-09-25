@@ -1,0 +1,42 @@
+{
+  "run_id": "qwen__cmmlu__qv__dora__s1107__n500__lr_x1.0",
+  "git_commit": "8e8b1657c187c1de7133f46ea540fa3bbad3bdae",
+  "dirty_worktree": false,
+  "model_checkpoint": "Qwen/Qwen2.5-7B@e25af2efae60472008fbeaf5fb7c4274a87f78d4",
+  "tokenizer": "Qwen/Qwen2.5-7B@e25af2efae60472008fbeaf5fb7c4274a87f78d4",
+  "chat_template_hash": "06d9597b76804e7ec3014f7fa84bf176654ac3695d6c604fe70deb062d724ede",
+  "dataset_split_hash": "ae5ece879af82d38f5b52cceaf964b0f47c2ecc42feff2520427ec4f05278c4a",
+  "method": "dora",
+  "seed": 1107,
+  "init_seed": 2280990289,
+  "data_order_seed": 1107,
+  "training_seed": 1107,
+  "max_steps": 500,
+  "target_modules": [
+    "q_proj",
+    "v_proj"
+  ],
+  "environment": {
+    "conda": "minimind-revision",
+    "python": "3.10.20",
+    "packages": {
+      "torch": "2.11.0+cu128",
+      "transformers": "4.53.2",
+      "peft": "0.17.1",
+      "datasets": "3.6.0",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3"
+    }
+  },
+  "hardware": {
+    "device": "NVIDIA GeForce RTX 5090",
+    "count": 1
+  },
+  "config_hash": "30c0c568d7462ebce40715fba64b0ed47ce39b4d7722d5b4244522ee2adb96f9",
+  "effective_method": "dora",
+  "effective_learning_rate": 0.0003,
+  "validation_selection": null,
+  "model_loader_provenance": {
+    "mode": "native_transformers_local_checkpoint"
+  }
+}

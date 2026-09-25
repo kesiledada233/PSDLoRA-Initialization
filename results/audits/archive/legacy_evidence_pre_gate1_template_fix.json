@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-09-04T16:22:24.161386+00:00",
+  "status": "ready_for_gate1_reconstructed_replay",
+  "provenance_status": "reconstructed_from_legacy_entrypoint_defaults_run_summaries_logs_and_adapter_configs",
+  "canonical_manifest_sha256": "0df1a6d11f2b614ebc3108b52b556e80a8ebcee2ef13a85b90b46f7c2b7995a7",
+  "gate1_config": "revision_experiments/config/gate1_replay.yaml",
+  "gate1_config_sha256": "52ab4a50e267f955435e865119a7816832635ef25014162a12fd3dae904408c2",
+  "entrypoint": "legacy_artifacts/submission/FDT_Init/train_openpangu_fda_lora_final.py",
+  "entrypoint_sha256": "2c618d9a3f63a4e2973639985595e9f9e785a5875bd9ee6f5a95d01632d4f982",
+  "source_defaults": {
+    "num_samples": 0,
+    "model_path": "/opt/pangu/openPangu-Embedded-7B-V1.1",
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lora_target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "batch_size": 2,
+    "max_length": 512,
+    "max_iters": 2500,
+    "eval_interval": 100,
+    "grad_accum_steps": 4,
+    "lr": 5e-05,
+    "weight_decay": 0.01,
+    "warmup_steps": 100,
+    "max_grad_norm": 1.0,
+    "use_fdt_init": false,
+    "fdt_alpha": 1.1,
+    "fdt_method": "fft",
+    "verify_fdt": false,
+    "plot_spectra": false,
+    "init_preset": null,
+    "record_gradnorm": false,
+    "full_test_eval": false,
+    "measure_final_spectrum": false,
+    "seed": 1107,
+    "verbose": false,
+    "device": "npu:1"
+  },
+  "source_contract": {
+    "labels_clone_input_ids": true,
+    "padding_labels_masked": false,
+    "pad_token_set_to_eos_when_missing": true,
+    "reported_loss_restores_accumulation_divisor": true,
+    "optimizer_updates_on_accumulation_boundary": true
+  },
+  "runs": [
+    {
+      "seed": 1107,
+      "summary": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/results.json",
+      "summary_sha256": "2d87bd63ef265804d7f9bffafd2ca65355ecae6e981714ae05d6e9648351b755",
+      "raw_log": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/training_log.csv",
+      "raw_log_sha256": "59903dcdb07a1a64123abc67c614aa8224a49541e38177c1029288ecb50bc605",
+      "checkpoint": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/final_model",
+      "adapter_config_sha256": "0ebed571bd68df59ad14ac07d97ae6a48ef4a3aa075c44b3578f32ffb8f940c0",
+      "adapter_weights_sha256": "c5ae99ff25ab679329cb7dc8c87783cefbd9f0723c415ace4ef639429feeaa39",
+      "adapter_tensor_contract": {
+        "tensor_count": 136,
+        "lora_a_tensor_count": 68,
+        "lora_b_tensor_count": 68,
+        "transformer_layer_count": 34,
+        "target_modules": [
+          "q_proj",
+          "v_proj"
+        ],
+        "rank": 16,
+        "hidden_size": 4096,
+        "value_projection_size": 1024
+      },
+      "rows": 2500,
+      "step_min": 1,
+      "step_max": 2500,
+      "first_100_median_loss": 16.689936637878418,
+      "legacy_sum_auc500": 3105.87888084352,
+      "trapezoid_auc_steps_1_to_500": 3097.868750974536,
+      "loss_at_microstep_500": 0.3900078535079956
+    },
+    {
+      "seed": 123,
+      "summary": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/results.json",
+      "summary_sha256": "7c4fbea2679b9bf80c263a7cded52e0ef6cfb75011bd421a2f5270247d8a18a6",
+      "raw_log": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/training_log.csv",
+      "raw_log_sha256": "4e0792e68c3f230dd574c473afe91c43da777d370f4fa47a2608d1708832e419",
+      "checkpoint": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/final_model",
+      "adapter_config_sha256": "c51dbe0c1c3fb993589b452a9b582b992c5676307e8aa893aeab53964467dde1",
+      "adapter_weights_sha256": "7bb44bb0970fbb76dbd55617d8f3c255498ab7d8b0d9ab7afb89952f22e368ef",
+      "adapter_tensor_contract": {
+        "tensor_count": 136,
+        "lora_a_tensor_count": 68,
+        "lora_b_tensor_count": 68,
+        "transformer_layer_count": 34,
+        "target_modules": [
+          "q_proj",
+          "v_proj"
+        ],
+        "rank": 16,
+        "hidden_size": 4096,
+        "value_projection_size": 1024
+      },
+      "rows": 2500,
+      "step_min": 1,
+      "step_max": 2500,
+      "first_100_median_loss": 16.5572509765625,
+      "legacy_sum_auc500": 3169.1631023585796,
+      "trapezoid_auc_steps_1_to_500": 3160.080242946744,
+      "loss_at_microstep_500": 0.32587888836860657
+    },
+    {
+      "seed": 42,
+      "summary": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/results.json",
+      "summary_sha256": "dd9009c4a057459dc8625943f160dc28d494881d3871b26aad6d5bed8d60d35a",
+      "raw_log": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/training_log.csv",
+      "raw_log_sha256": "caa8b915efce65ac80207549a421d0d709c11103ef839a65e7bdebf91ebd3156",
+      "checkpoint": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/final_model",
+      "adapter_config_sha256": "c51dbe0c1c3fb993589b452a9b582b992c5676307e8aa893aeab53964467dde1",
+      "adapter_weights_sha256": "17e9b15050d565977eef3b5841aa856dbe513d08285b18348e2ac6499db8d35f",
+      "adapter_tensor_contract": {
+        "tensor_count": 136,
+        "lora_a_tensor_count": 68,
+        "lora_b_tensor_count": 68,
+        "transformer_layer_count": 34,
+        "target_modules": [
+          "q_proj",
+          "v_proj"
+        ],
+        "rank": 16,
+        "hidden_size": 4096,
+        "value_projection_size": 1024
+      },
+      "rows": 2500,
+      "step_min": 1,
+      "step_max": 2500,
+      "first_100_median_loss": 16.831838607788086,
+      "legacy_sum_auc500": 3102.120908394456,
+      "trapezoid_auc_steps_1_to_500": 3095.258982911706,
+      "loss_at_microstep_500": 0.4765775203704834
+    }
+  ],
+  "reference_ranges": {
+    "trapezoid_auc_steps_1_to_500": [
+      3095.258982911706,
+      3160.080242946744
+    ],
+    "loss_at_microstep_500": [
+      0.32587888836860657,
+      0.4765775203704834
+    ],
+    "first_100_median_loss": [
+      16.5572509765625,
+      16.831838607788086
+    ]
+  },
+  "legacy_high_loss_explanation": {
+    "observed": true,
+    "observed_first_100_median_range": [
+      16.5572509765625,
+      16.831838607788086
+    ],
+    "code_mechanism": "Legacy labels cloned every padded input token and never replaced padding labels with -100.",
+    "gradient_accumulation_not_the_multiplier": "The legacy code divides loss before backward and multiplies it back only for logging; the CSV therefore stores the model loss, not a fourfold sum.",
+    "causal_confirmation_required": "Gate 2 must compare the same openPangu batches with masked and legacy-unmasked labels."
+  },
+  "limitations": [
+    "The missing original config.json means batch, optimizer, scheduler and logging fields are reconstructed from entrypoint defaults.",
+    "Seed 1107 is inferred from the unsuffixed run name plus the entrypoint default; seeds 123 and 42 are explicit in directory names.",
+    "Framework, accelerator and exact shuffled indices cannot be made bitwise identical to the submitted NPU run."
+  ],
+  "reusable_as_revision_result": false
+}

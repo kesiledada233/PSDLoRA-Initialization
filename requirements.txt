@@ -1,0 +1,5 @@
+# Install into a clone of minimind-exp; do not mutate the inspection environment.
+transformers==4.53.2
+peft==0.17.1
+pytest==8.4.2
+seaborn==0.13.2

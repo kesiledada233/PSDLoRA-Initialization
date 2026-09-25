@@ -1,0 +1,33 @@
+{
+  "captured_at_utc": "2026-09-03T07:44:40.705913+00:00",
+  "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+  "executable": "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "machine": "x86_64",
+  "conda_environment": "minimind-revision",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.53.2",
+    "datasets": "3.6.0",
+    "accelerate": "1.14.0",
+    "peft": "0.17.1",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "pandas": "2.3.3",
+    "pyarrow": "24.0.0",
+    "matplotlib": "3.10.9",
+    "seaborn": "0.13.2",
+    "PyYAML": "6.0.3"
+  },
+  "torch": {
+    "version": "2.11.0+cu128",
+    "cuda_build": "12.8",
+    "cuda_available": true,
+    "cuda_device_count": 2,
+    "devices": [
+      "NVIDIA GeForce RTX 5090",
+      "NVIDIA GeForce RTX 5090"
+    ]
+  },
+  "nvidia_smi": "0, NVIDIA GeForce RTX 5090, 32607 MiB, 591.44\n1, NVIDIA GeForce RTX 5090, 32607 MiB, 591.44"
+}

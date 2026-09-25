@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "run_id": "openpangu__sharegpt__qv__powerlaw_global_a06__s1107__n2500",
+  "checkpoint": 2500,
+  "sample_count": 200,
+  "sample_set_hash": "e19354783793c992fb5c6cc00a4db2819d535b2472ab0abf9cd55cfbbbd07a58",
+  "candidate_artifact": "revision_experiments/results/evaluations/openpangu__sharegpt__qv__powerlaw_global_a06__s1107__n2500__step_002500__sharegpt_candidates.jsonl",
+  "candidate_sha256": "ce0674d0f34966d83cc1d048297d8984b5bf85048ec33aa49258e0a455c8ce19",
+  "candidate_generation_seconds": 2380.9707092680037
+}

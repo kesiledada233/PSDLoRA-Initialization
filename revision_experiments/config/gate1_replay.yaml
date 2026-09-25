@@ -1,0 +1,80 @@
+schema_version: 1
+profile: openpangu_gsm8k_peft_default_legacy_replay
+enabled: true
+purpose: gate1_reconstruction_only_not_a_revision_result
+
+legacy_provenance:
+  status: reconstructed_from_legacy_entrypoint_defaults_run_summaries_logs_and_adapter_configs
+  exact_submitted_argv_available: false
+  exact_submitted_environment_available: false
+  reusable_as_revision_result: false
+  import_audit: revision_experiments/results/audits/legacy_import.json
+  evidence_audit: revision_experiments/results/audits/legacy_evidence.json
+
+model:
+  key: openpangu
+  submitted_path: /opt/pangu/openPangu-Embedded-7B-V1.1
+  local_path: pretrained_models/openPangu-Embedded-7B-V1.1
+  hub_id: openpangu/openPangu-Embedded-7B-V1.1
+  revision: 0ae1841cbd53f5218f2ce5dc63083d5382cfc9f5
+  precision: fp16
+
+task: gsm8k
+replay_seed: 1107
+reference_seeds: [1107, 123, 42]
+training:
+  batch_size: 2
+  max_length: 512
+  submitted_microsteps: 2500
+  replay_microsteps: 500
+  gradient_accumulation_microsteps: 4
+  optimizer: adamw
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  scheduler: linear_with_warmup
+  warmup_optimizer_steps: 100
+  max_grad_norm: 1.0
+  label_policy: legacy_unmasked_padding
+  text_format: submitted_chinese_task_template
+  peft_attachment_order: base_model_on_cpu_then_move_augmented_model_to_accelerator
+  data_loader: pytorch_shuffle_global_rng
+  log_step_unit: microbatch
+  optimizer_step_unit: four_microbatches
+  evaluation_during_replay: false
+adapter:
+  method: peft_default
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q_proj, v_proj]
+  bias: none
+  task_type: CAUSAL_LM
+  init_lora_weights: true
+
+references:
+  entrypoint: legacy_artifacts/submission/FDT_Init/train_openpangu_fda_lora_final.py
+  runs:
+    - seed: 1107
+      summary: legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/results.json
+      raw_log: legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/training_log.csv
+      checkpoint: legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/final_model
+    - seed: 123
+      summary: legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/results.json
+      raw_log: legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/training_log.csv
+      checkpoint: legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/final_model
+    - seed: 42
+      summary: legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/results.json
+      raw_log: legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/training_log.csv
+      checkpoint: legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/final_model
+
+declared_adaptations:
+  - Ascend NPU is replaced by one CUDA GPU; absolute wall time is not compared.
+  - The submitted absolute model path is replaced by the hash-verified local pinned checkpoint.
+  - The audited temporary CUDA compatibility overlay is used; source model files remain unchanged.
+  - The replay stops after 500 legacy microsteps because Gate 1-R compares only the early curve.
+  - Periodic validation is skipped because it does not update parameters or consume the training loader.
+
+limitations:
+  - The missing original config.json means batch, optimizer, scheduler and logging fields are reconstructed from entrypoint defaults.
+  - Seed 1107 is inferred from the unsuffixed run name plus the entrypoint default; seeds 123 and 42 are explicit in directory names.
+  - Framework, accelerator and exact shuffled indices cannot be made bitwise identical to the submitted NPU run.

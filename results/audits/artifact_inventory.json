@@ -1,0 +1,403 @@
+{
+  "captured_at_utc": "2026-09-04T17:40:00.873699+00:00",
+  "hash_large": false,
+  "files": [
+    {
+      "path": "pretrained_models/openPangu-Embedded-7B-V1.1/config.json",
+      "exists": true,
+      "size_bytes": 861,
+      "sha256": "8e300541888d68a6148d18720fa6b2df48f71e2e1606026d55b30af6dcb2ba37"
+    },
+    {
+      "path": "pretrained_models/openPangu-Embedded-7B-V1.1/tokenizer_config.json",
+      "exists": true,
+      "size_bytes": 6313,
+      "sha256": "acb88eac57f8765fedf34e9c10bc16d55c46f0902b0fea74fbf041daca2667ae"
+    },
+    {
+      "path": "pretrained_models/openPangu-Embedded-7B-V1.1/tokenizer.model",
+      "exists": true,
+      "size_bytes": 2477809,
+      "sha256": "6b16f1558c0cd4ae6ef1a2c605713be0a514f50e1ce2d2c878979ce988c148ec"
+    },
+    {
+      "path": "pretrained_models/openPangu-Embedded-7B-V1.1/model.safetensors.index.json",
+      "exists": true,
+      "size_bytes": 39428,
+      "sha256": "9bf645e8399be6d99000eae64bd172b5c457d6d2c44d2257b47eb97a3c41aeda"
+    },
+    {
+      "path": "pretrained_models/openPangu-Embedded-7B-V1.1/model-00001-of-00004.safetensors",
+      "exists": true,
+      "size_bytes": 4926842416
+    },
+    {
+      "path": "pretrained_models/openPangu-Embedded-7B-V1.1/model-00002-of-00004.safetensors",
+      "exists": true,
+      "size_bytes": 4991686576
+    },
+    {
+      "path": "pretrained_models/openPangu-Embedded-7B-V1.1/model-00003-of-00004.safetensors",
+      "exists": true,
+      "size_bytes": 4886853760
+    },
+    {
+      "path": "pretrained_models/openPangu-Embedded-7B-V1.1/model-00004-of-00004.safetensors",
+      "exists": true,
+      "size_bytes": 1256456320
+    },
+    {
+      "path": "pretrained_models/Qwen2.5-7B/config.json",
+      "exists": true,
+      "size_bytes": 686,
+      "sha256": "267ce68584c5f24c3b267d934db2de68dd21d1ca677fb78ed809eb60067f7642"
+    },
+    {
+      "path": "pretrained_models/Qwen2.5-7B/tokenizer_config.json",
+      "exists": true,
+      "size_bytes": 7228,
+      "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+    },
+    {
+      "path": "pretrained_models/Qwen2.5-7B/model.safetensors.index.json",
+      "exists": true,
+      "size_bytes": 27752,
+      "sha256": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028"
+    },
+    {
+      "path": "pretrained_models/Qwen2.5-7B/model-00001-of-00004.safetensors",
+      "exists": true,
+      "size_bytes": 3945441440
+    },
+    {
+      "path": "pretrained_models/Qwen2.5-7B/model-00002-of-00004.safetensors",
+      "exists": true,
+      "size_bytes": 3864726352
+    },
+    {
+      "path": "pretrained_models/Qwen2.5-7B/model-00003-of-00004.safetensors",
+      "exists": true,
+      "size_bytes": 3864726424
+    },
+    {
+      "path": "pretrained_models/Qwen2.5-7B/model-00004-of-00004.safetensors",
+      "exists": true,
+      "size_bytes": 3556377672
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/config.json",
+      "exists": true,
+      "size_bytes": 653,
+      "sha256": "4f614d223406ae6c1191fa959eae6b3912b530e3ecb3a10eafc2b9fb7f38b258"
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/tokenizer_config.json",
+      "exists": true,
+      "size_bytes": 2134,
+      "sha256": "528708fe32f58edd6ae89f46893b2b245ed0519d7bf3f790f7d382e0dca02688"
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/model.safetensors.index.json",
+      "exists": true,
+      "size_bytes": 22771,
+      "sha256": "098d1f7a096e04a55c90c33a2e92c47fba4c07e41aff99266fad774908fa5023"
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/model-00001-of-00008.safetensors",
+      "exists": true,
+      "size_bytes": 1979773128
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/model-00002-of-00008.safetensors",
+      "exists": true,
+      "size_bytes": 1946235640
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/model-00003-of-00008.safetensors",
+      "exists": true,
+      "size_bytes": 1973490216
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/model-00004-of-00008.safetensors",
+      "exists": true,
+      "size_bytes": 1979781464
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/model-00005-of-00008.safetensors",
+      "exists": true,
+      "size_bytes": 1946243984
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/model-00006-of-00008.safetensors",
+      "exists": true,
+      "size_bytes": 1923166040
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/model-00007-of-00008.safetensors",
+      "exists": true,
+      "size_bytes": 1946243984
+    },
+    {
+      "path": "pretrained_models/prometheus-7b-v2.0/model-00008-of-00008.safetensors",
+      "exists": true,
+      "size_bytes": 788563544
+    },
+    {
+      "path": "pretrained_models/gsm8k/dataset_dict.json",
+      "exists": true,
+      "size_bytes": 29,
+      "sha256": "65fae6c706b1546da1530d427b62b39df6dd156cce4b92a208091410c52a4362"
+    },
+    {
+      "path": "pretrained_models/mbpp/mbpp.jsonl",
+      "exists": true,
+      "size_bytes": 563743,
+      "sha256": "ccf64ceae9c5403bf50a044cb6d505bfd2a2963ee58338ba268fd65beab92a9f"
+    },
+    {
+      "path": "pretrained_models/sharegpt_datasets/computer_en_26k.jsonl",
+      "exists": true,
+      "size_bytes": 61824919,
+      "sha256": "f387fe1dd3fe4bbac1be473f8d0ed64916642ee85c5d584e76bc33853096949f"
+    },
+    {
+      "path": "revision_experiments/data/processed/manifest.json",
+      "exists": true,
+      "size_bytes": 415,
+      "sha256": "49d8a434390598394738f0edda21e8f780f383905ad40ab96650f2c3379d049a"
+    },
+    {
+      "path": "revision_experiments/data/processed/cmmlu/dataset_dict.json",
+      "exists": true,
+      "size_bytes": 29,
+      "sha256": "65fae6c706b1546da1530d427b62b39df6dd156cce4b92a208091410c52a4362"
+    },
+    {
+      "path": "revision_experiments/data/processed/mbpp/dataset_dict.json",
+      "exists": true,
+      "size_bytes": 29,
+      "sha256": "65fae6c706b1546da1530d427b62b39df6dd156cce4b92a208091410c52a4362"
+    },
+    {
+      "path": "revision_experiments/data/processed/sharegpt_split.json",
+      "exists": true,
+      "size_bytes": 113289,
+      "sha256": "25c61a9528f2cda38748440210a45f18115ac15791b5e7c2efbc06356b0ba212"
+    },
+    {
+      "path": "revision_experiments/data/processed/validation_split.json",
+      "exists": true,
+      "size_bytes": 14012,
+      "sha256": "d4279f43e636580ed8cb46fe75758a0055bb980443d7e4955ebe582b1f0c67d9"
+    },
+    {
+      "path": "revision_experiments/data/processed/sharegpt_judge_prompts.jsonl",
+      "exists": true,
+      "size_bytes": 72029,
+      "sha256": "b85da6f14b6047653f13fb0d5d407acc46e28aba429bba76c6c4fca333a24099"
+    },
+    {
+      "path": "revision_experiments/data/processed/sharegpt_judge_prompts.manifest.json",
+      "exists": true,
+      "size_bytes": 223,
+      "sha256": "8ba0e48c851fa1b816befb036bc8f77faf525cc2fe514b5951cd565192cbb0b3"
+    },
+    {
+      "path": "revision_experiments/results/audits/model_architecture.json",
+      "exists": true,
+      "size_bytes": 21664,
+      "sha256": "944ea075e9e474d57e332aa6ecf9d03961c053722066b55c9be68b5868f44eba"
+    },
+    {
+      "path": "revision_experiments/results/audits/environment_revision.json",
+      "exists": true,
+      "size_bytes": 1029,
+      "sha256": "641bfa09639b90f1e27f41c1aba732fc8dbab68c4917757689227129f61adbc6"
+    },
+    {
+      "path": "revision_experiments/results/audits/code_short_test.json",
+      "exists": true,
+      "size_bytes": 26450,
+      "sha256": "118b59887fc2b7a4339cd920abfe6c9f787dc84793b75e1add014ad7042b3b37"
+    },
+    {
+      "path": "revision_experiments/results/audits/initialization_statistics.csv",
+      "exists": true,
+      "size_bytes": 6135,
+      "sha256": "8598aab57d7db9f7af53749b91252638ddb6638e9ce770da133d19a08307f138"
+    },
+    {
+      "path": "revision_experiments/results/audits/initialization_statistics.parquet",
+      "exists": true,
+      "size_bytes": 10654,
+      "sha256": "3c36f0240abe22f68297829dc0e9a81ecf2cd33bf6e3b41fdb5be61e3898c4cd"
+    },
+    {
+      "path": "revision_experiments/results/audits/initialization_statistics_diagnostic.svg",
+      "exists": true,
+      "size_bytes": 407360,
+      "sha256": "1295b131621ecfd27ca5b3ccada6edd4d787edba9ebe0f4889a95f4f5b31f316"
+    },
+    {
+      "path": "revision_experiments/results/audits/initialization_statistics_diagnostic.png",
+      "exists": true,
+      "size_bytes": 279890,
+      "sha256": "9ee2bc51cff69d8caa7d684f6cf2ac7328798b3fc334b07c5513e8fdc0711293"
+    },
+    {
+      "path": "revision_experiments/results/audits/legacy_artifact_discovery.json",
+      "exists": true,
+      "size_bytes": 5203,
+      "sha256": "472b79a3608aed589f5eeec5bca021b1bf4751b14d8616030be808018ba4659d"
+    },
+    {
+      "path": "revision_experiments/results/audits/legacy_import.json",
+      "exists": true,
+      "size_bytes": 6695,
+      "sha256": "b8197e4362f183c8f8de09357eb79e80724398ebc8257ee26806d9b9ba3ebdc0"
+    },
+    {
+      "path": "revision_experiments/results/audits/legacy_evidence.json",
+      "exists": true,
+      "size_bytes": 7168,
+      "sha256": "35a4c109bbeccdb02b0d436ed78e293d00ccd8f16f3087beea1b4c10d3e82065"
+    },
+    {
+      "path": "revision_experiments/config/smoke/integration_smoke.yaml",
+      "exists": true,
+      "size_bytes": 1328,
+      "sha256": "88599da8d1514a6a360c9fee0584e878e789c01a936e89f5f9cd6d82c848fcad"
+    },
+    {
+      "path": "revision_experiments/results/audits/openpangu_checkpoint_verification.json",
+      "exists": true,
+      "size_bytes": 1159,
+      "sha256": "3c2196fe774fb13a68481b6c412d7fbcfb043af08a75cd9c53ab38fb559f4985"
+    },
+    {
+      "path": "revision_experiments/results/audits/qwen_checkpoint_verification.json",
+      "exists": true,
+      "size_bytes": 1141,
+      "sha256": "e94268d563bc42ad2a43e1c7c73be2ddd9def8a83bf4ff2d0ba1fa0fc45a2935"
+    },
+    {
+      "path": "revision_experiments/results/audits/openpangu_gpu_load_smoke.json",
+      "exists": true,
+      "size_bytes": 987,
+      "sha256": "dec4470fb3ded683254bc30d1134126591b42ee9fa393232d5d1a56e72e6320e"
+    },
+    {
+      "path": "revision_experiments/results/audits/qwen_gpu_load_smoke.json",
+      "exists": true,
+      "size_bytes": 706,
+      "sha256": "b026e7e616e34457b5bfbeaf54599419d44d1e8d0b3cb864d1339aa8288c6738"
+    },
+    {
+      "path": "revision_experiments/results/audits/prometheus_checkpoint_verification.json",
+      "exists": true,
+      "size_bytes": 1964,
+      "sha256": "011c2740665410056d26b4c7a6f869164516a86ef8f580bd4d6019b4764122e8"
+    },
+    {
+      "path": "revision_experiments/results/audits/prometheus_gpu_load_smoke.json",
+      "exists": true,
+      "size_bytes": 728,
+      "sha256": "ba214231df51b5e493b8e5d2687dfe03daa9cddf0f257640061778ed22b6d06c"
+    },
+    {
+      "path": "revision_experiments/results/audits/prometheus_scoring_smoke.json",
+      "exists": true,
+      "size_bytes": 3509,
+      "sha256": "0fb99dc8a4863976267778cb3b916a550c0c6f0a0047d9db9c793c459d807de7"
+    }
+  ],
+  "directories": {
+    "qwen": true,
+    "prometheus_judge": true,
+    "cmmlu_dev_subjects": 67,
+    "cmmlu_test_subjects": 67
+  },
+  "model_checkpoints": {
+    "openpangu": {
+      "path": "pretrained_models/openPangu-Embedded-7B-V1.1",
+      "exists": true,
+      "expected_weight_files": 4,
+      "missing_files": [],
+      "incomplete_files": [],
+      "ready": true
+    },
+    "qwen": {
+      "path": "pretrained_models/Qwen2.5-7B",
+      "exists": true,
+      "expected_weight_files": 4,
+      "missing_files": [],
+      "incomplete_files": [],
+      "ready": true
+    },
+    "prometheus_judge": {
+      "path": "pretrained_models/prometheus-7b-v2.0",
+      "exists": true,
+      "expected_weight_files": 8,
+      "missing_files": [],
+      "incomplete_files": [],
+      "ready": true
+    }
+  },
+  "ready_without_optional_downloads": true,
+  "ready_for_training_gates": true,
+  "ready_for_all_evaluations": true,
+  "evidence_validation_errors": [],
+  "execution_gates": {
+    "schema_version": 1,
+    "ready_for_integration_smokes": true,
+    "ready_for_formal_training": true,
+    "model_gate_evidence": {
+      "openpangu": {
+        "revision": "0ae1841cbd53f5218f2ce5dc63083d5382cfc9f5",
+        "verified": true
+      },
+      "qwen": {
+        "revision": "e25af2efae60472008fbeaf5fb7c4274a87f78d4",
+        "verified": true
+      }
+    },
+    "gate1_reproduction": {
+      "passed": true,
+      "report": "revision_experiments/results/audits/gate1_reproduction.json",
+      "legacy": {
+        "import_root": "legacy_artifacts/submission",
+        "manifest": "legacy_artifacts/submission/SHA256SUMS",
+        "manifest_sha256": "0df1a6d11f2b614ebc3108b52b556e80a8ebcee2ef13a85b90b46f7c2b7995a7",
+        "artifact_count": 13,
+        "mapped": {
+          "configs": [
+            "legacy_artifacts/submission/FDT_Init/train_openpangu_fda_lora_final.py",
+            "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/results.json",
+            "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/results.json",
+            "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/results.json"
+          ],
+          "logs": [
+            "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/training_log.csv",
+            "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/training_log.csv",
+            "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/training_log.csv"
+          ],
+          "checkpoints": [
+            "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/final_model",
+            "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/final_model",
+            "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/final_model"
+          ]
+        }
+      }
+    },
+    "gate2_step_zero": {
+      "passed": true,
+      "report": "revision_experiments/results/audits/step_zero_audit.json"
+    },
+    "integration_smokes": {
+      "passed": true,
+      "report": "revision_experiments/results/audits/integration_smoke.json"
+    },
+    "errors": []
+  },
+  "ready_for_formal_training": true
+}

@@ -1,0 +1,124 @@
+schema_version: 1
+matrix_name: baseline_fairness_qwen_table3
+enabled: true
+model: qwen
+tasks: [gsm8k, cmmlu, sharegpt, mbpp]
+validation_split:
+  manifest: revision_experiments/data/processed/validation_split.json
+  seed: 20260903
+  counts: {gsm8k: 256, cmmlu: 67, mbpp: 100, sharegpt: 500}
+screening:
+  seed: 1107
+  max_steps: 500
+  selection_metric: validation_auc500
+  methods:
+    dora:
+      method: dora
+      central_learning_rate: 3.0e-4
+      learning_rate_multipliers: [0.5, 1.0, 2.0]
+    pissa:
+      method: pissa
+      central_learning_rate: 2.0e-5
+      learning_rate_multipliers: [0.5, 1.0, 2.0]
+    lora_one:
+      method: lora_one
+      central_learning_rate: 5.0e-5
+      learning_rate_multipliers: [0.5, 1.0, 2.0]
+      gradient_batches: 8
+      gradient_batch_size: 1
+      gradient_max_length: 1024
+      stable_gamma: 128
+      lora_config_overrides: {lora_alpha: 16, use_rslora: true}
+    proposed:
+      method: powerlaw_global
+      central_learning_rate: 5.0e-5
+      alpha_values: [0.3, 0.6, 1.0]
+final:
+  # Deadline amendment (author-approved, 2026-09-12): the equal-budget search
+  # remains four-task; three-seed 2500-step confirmation is concentrated on
+  # CMMLU and is reported as such.
+  tasks: [cmmlu]
+  methods: [peft_default, dora, pissa, lora_one, validation_selected_proposed]
+  seeds: [1107, 123, 42]
+  max_steps: 2500
+  checkpoints: [2500]
+  evaluation_checkpoints: [2500]
+  task_metrics:
+    gsm8k: exact_match
+    cmmlu: macro_accuracy
+    mbpp: pass_at_1
+    sharegpt: prometheus_absolute_score
+  evaluation:
+    gsm8k: {metric: exact_match, prompt: fixed_8shot_cot, decoding: greedy, sample_count: 1319, sample_selection: full_frozen_official_test_order}
+    cmmlu: {metric: macro_accuracy, prompt: fixed_5shot_by_subject, decoding: greedy, sample_count: 11582, sample_selection: full_frozen_official_test_order}
+    mbpp: {metric: pass_at_1, prompt: fixed_3shot, decoding: greedy, sample_count: 374, sample_selection: full_frozen_official_test_order}
+    sharegpt:
+      metrics: [heldout_nll, prometheus_absolute_score]
+      judge: prometheus-7b-v2.0
+      judge_revision: 66ffb1fc20beebfb60a3964a957d9011723116c5
+      comparison_reference: frozen_first_assistant_response
+      judge_prompt: prometheus2_official_absolute_mistral_v1
+      score_range: [1, 5]
+      prompt_count: 200
+      sample_count: 200
+      sample_selection: frozen_sharegpt_judge_prompt_manifest_order
+training_defaults:
+  precision: bf16
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  max_length: 512
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_steps: 100
+  scheduler: cosine
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: [q_proj, v_proj]
+  validation_interval: 25
+  validation_max_step: 500
+  validation_batch_size: 1
+provenance:
+  peft_version: 0.17.1
+  peft_repository: https://github.com/huggingface/peft
+  peft_release: https://github.com/huggingface/peft/releases/tag/v0.17.1
+  lora_one_repository: https://github.com/YuanheZ/LoRA-One
+  lora_one_commit: b797a10dcb818e9553b57fa060baa7b00df4484d
+  lora_one_gradient_batches: 8
+  lora_one_gradient_max_length: 1024
+  lora_one_stable_gamma: 128
+  methods:
+    dora:
+      implementation: peft.LoraConfig(use_dora=true)
+      official_repository: https://github.com/NVlabs/DoRA
+      implementation_version: peft==0.17.1
+      central_learning_rate_reference: https://github.com/huggingface/peft/blob/v0.17.1/examples/dora_finetuning/dora_finetuning.py
+      documented_central_learning_rate: 3.0e-4
+      initialization_data_requirement: pretrained model weights; no task examples
+      target_modules: [q_proj, v_proj]
+    pissa:
+      implementation: peft.LoraConfig(init_lora_weights=pissa)
+      official_repository: https://github.com/GraphPKU/PiSSA
+      implementation_version: peft==0.17.1
+      central_learning_rate_reference: https://github.com/huggingface/peft/blob/v0.17.1/examples/pissa_finetuning/README.md
+      documented_central_learning_rate: 2.0e-5
+      initialization_data_requirement: pretrained model weights for exact SVD; no task examples
+      target_modules: [q_proj, v_proj]
+    lora_one:
+      implementation: revision_experiments.initializers.lora_one official stable-formula adapter with PEFT rsLoRA scaling
+      official_repository: https://github.com/YuanheZ/LoRA-One
+      implementation_commit: b797a10dcb818e9553b57fa060baa7b00df4484d
+      central_learning_rate_reference: https://github.com/YuanheZ/LoRA-One/blob/b797a10dcb818e9553b57fa060baa7b00df4484d/README.md
+      documented_central_learning_rate: 5.0e-5
+      initialization_data_requirement: first 8 frozen screening-train batches at max_length 1024
+      lora_rank: 16
+      lora_alpha: 16
+      use_rslora: true
+      target_modules: [q_proj, v_proj]
+    proposed:
+      implementation: revision_experiments.initializers.registry powerlaw_global alpha variants
+      implementation_version: reconstructed experiment commit recorded per run
+      central_learning_rate_reference: submitted Table III shared training configuration
+      documented_central_learning_rate: 5.0e-5
+      initialization_data_requirement: deterministic initialization seed; no task examples
+      target_modules: [q_proj, v_proj]

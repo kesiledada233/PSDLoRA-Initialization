@@ -1,0 +1,79 @@
+{
+  "ok": false,
+  "matrices": {
+    "baseline_fairness_qwen_table3": {
+      "expected": 63,
+      "complete": 63,
+      "failed": 0,
+      "missing": 0,
+      "invalid": 0,
+      "enabled": true
+    },
+    "core_500step": {
+      "expected": 48,
+      "complete": 48,
+      "failed": 0,
+      "missing": 0,
+      "invalid": 0,
+      "enabled": false
+    },
+    "downstream_2500step": {
+      "expected": 63,
+      "complete": 63,
+      "failed": 0,
+      "missing": 0,
+      "invalid": 0,
+      "enabled": false
+    },
+    "mechanism_500step": {
+      "expected": 48,
+      "complete": 48,
+      "failed": 0,
+      "missing": 0,
+      "invalid": 0,
+      "enabled": false
+    },
+    "scope": {
+      "expected": 12,
+      "complete": 12,
+      "failed": 0,
+      "missing": 0,
+      "invalid": 0,
+      "enabled": false
+    }
+  },
+  "errors": [
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'cmmlu', 'peft_default', 'step_000100', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'cmmlu', 'peft_default', 'step_000500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'cmmlu', 'peft_default', 'step_001500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'cmmlu', 'powerlaw_global_a06', 'step_000100', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'cmmlu', 'powerlaw_global_a06', 'step_000500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'cmmlu', 'powerlaw_global_a06', 'step_001500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'gsm8k', 'peft_default', 'step_001500', 'exact_match'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'gsm8k', 'powerlaw_global_a06', 'step_001500', 'exact_match'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'mbpp', 'peft_default', 'step_000100', 'pass_at_1'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'mbpp', 'peft_default', 'step_000500', 'pass_at_1'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'mbpp', 'peft_default', 'step_001500', 'pass_at_1'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'mbpp', 'powerlaw_global_a06', 'step_000100', 'pass_at_1'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'mbpp', 'powerlaw_global_a06', 'step_000500', 'pass_at_1'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('downstream_2500step', 'openpangu', 'mbpp', 'powerlaw_global_a06', 'step_001500', 'pass_at_1'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'iid_matched', 'step_000500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'iid_matched', 'step_000500', 'raw_auc500'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'iid_matched', 'step_002500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'iid_matched', 'step_010000', 'final_train_loss'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'iid_matched', 'step_010000', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'peft_default', 'step_000500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'peft_default', 'step_000500', 'raw_auc500'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'peft_default', 'step_002500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'peft_default', 'step_010000', 'final_train_loss'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'peft_default', 'step_010000', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'powerlaw_global_a06', 'step_000500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'powerlaw_global_a06', 'step_000500', 'raw_auc500'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'powerlaw_global_a06', 'step_002500', 'macro_accuracy'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'powerlaw_global_a06', 'step_010000', 'final_train_loss'): [1107]",
+    "reviewer seed group must contain exactly three seeds for ('scope_long_run', 'openpangu', 'cmmlu', 'powerlaw_global_a06', 'step_010000', 'macro_accuracy'): [1107]",
+    "reviewer_summary_metrics.csv must report n_runs=3 from independent seeds",
+    "reviewer_paired_differences.csv must report n_runs=3 from independent seeds",
+    "reviewer_paired_difference_summary.csv must report n_runs=3 from independent seeds"
+  ]
+}

@@ -1,0 +1,38 @@
+schema_version: 1
+matrix_name: mechanism_500step
+enabled: false
+run_suffix: gradlog
+model_task_pairs:
+  - [openpangu, cmmlu]
+  - [qwen, cmmlu]
+methods:
+  - peft_default
+  - iid_matched
+  - fft_white_a0
+  - powerlaw_global_a03
+  - powerlaw_global_a06
+  - powerlaw_shuffle_a06
+  - powerlaw_row_a06
+  - powerlaw_col_a06
+seeds: [1107, 123, 42]
+max_steps: 500
+checkpoints: [100, 250, 500]
+training:
+  precision: bf16
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  max_length: 512
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_steps: 100
+  scheduler: cosine
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: [q_proj, v_proj]
+logging:
+  gradient_coordinates: true
+  coordinate_seed: 20260903
+  coordinates_per_matrix: 4096
+  layers: [first, middle, last]
+  full_matrix_steps: [0, 10, 50, 100, 250, 500]

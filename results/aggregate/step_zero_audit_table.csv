@@ -1,0 +1,5 @@
+model,task,seed,method,b_nonzero,max_abs_logit_difference,mean_abs_logit_difference,max_abs_loss_difference,mean_abs_loss_difference,tolerance,equivalence_passed,source_artifact,source_sha256
+openpangu,gsm8k,1107,peft_default,0,0.0,0.0,0.0,0.0,0.001,True,/home/b205/FDA_INIT/revision_experiments/results/audits/step_zero_audit.json,1dfd709dd74db857e9a4fa52c98108b72eb9308083c97bf16455192833fd1271
+openpangu,gsm8k,1107,powerlaw_global_a06,0,0.0,0.0,0.0,0.0,0.001,True,/home/b205/FDA_INIT/revision_experiments/results/audits/step_zero_audit.json,1dfd709dd74db857e9a4fa52c98108b72eb9308083c97bf16455192833fd1271
+qwen,cmmlu,1107,peft_default,0,0.0,0.0,0.0,0.0,0.001,True,/home/b205/FDA_INIT/revision_experiments/results/audits/step_zero_audit.json,1dfd709dd74db857e9a4fa52c98108b72eb9308083c97bf16455192833fd1271
+qwen,cmmlu,1107,powerlaw_global_a06,0,0.0,0.0,0.0,0.0,0.001,True,/home/b205/FDA_INIT/revision_experiments/results/audits/step_zero_audit.json,1dfd709dd74db857e9a4fa52c98108b72eb9308083c97bf16455192833fd1271

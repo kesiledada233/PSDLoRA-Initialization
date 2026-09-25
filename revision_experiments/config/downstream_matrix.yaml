@@ -1,0 +1,77 @@
+schema_version: 1
+matrix_name: downstream_2500step
+enabled: false
+models: [openpangu, qwen]
+tasks: [gsm8k, cmmlu, sharegpt, mbpp]
+methods: [peft_default, powerlaw_global_a06]
+additional_runs:
+  - models: [openpangu]
+    tasks: [gsm8k, cmmlu, sharegpt, mbpp]
+    methods: [iid_matched]
+  - models: [qwen]
+    tasks: [cmmlu]
+    methods: [iid_matched]
+seeds: [1107, 123, 42]
+max_steps: 2500
+checkpoints: [0, 100, 250, 500, 1000, 1500, 2500]
+# Deadline amendment (author-approved, 2026-09-12): preserve three-seed final
+# quality for the two headline methods on every model/task pair, retain the
+# scale-matched final control on CMMLU, and make intermediate curves explicitly
+# descriptive (openPangu, seed 1107, non-judge tasks). Gate 2 supplies the
+# already-verified step-zero anchor, so no formal step-zero generation repeats.
+evaluation_rules:
+  - name: headline_final
+    checkpoints: [2500]
+    models: [openpangu, qwen]
+    tasks: [gsm8k, cmmlu, sharegpt, mbpp]
+    methods: [peft_default, powerlaw_global_a06]
+    seeds: [1107, 123, 42]
+  - name: scale_control_final
+    checkpoints: [2500]
+    models: [openpangu, qwen]
+    tasks: [cmmlu]
+    methods: [iid_matched]
+    seeds: [1107, 123, 42]
+  - name: descriptive_curves_gsm8k_single_point
+    # 2026-09-13 author decision (option B): long-CoT GSM8K generation is the
+    # most expensive evaluation per checkpoint (~6.8 h at batch 1 and batching
+    # fails equivalence); keep one informative mid-training point instead of
+    # three. Backfilling the dropped points later requires evaluation only.
+    checkpoints: [1500]
+    models: [openpangu]
+    tasks: [gsm8k]
+    methods: [peft_default, powerlaw_global_a06]
+    seeds: [1107]
+  - name: descriptive_curves
+    checkpoints: [100, 500, 1500]
+    models: [openpangu]
+    tasks: [cmmlu, mbpp]
+    methods: [peft_default, powerlaw_global_a06]
+    seeds: [1107]
+training:
+  precision: bf16
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  max_length: 512
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_steps: 100
+  scheduler: cosine
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: [q_proj, v_proj]
+evaluation:
+  gsm8k: {metric: exact_match, prompt: fixed_8shot_cot, decoding: greedy, sample_count: 1319, sample_selection: full_frozen_official_test_order}
+  cmmlu: {metric: macro_accuracy, prompt: fixed_5shot_by_subject, decoding: greedy, sample_count: 11582, sample_selection: full_frozen_official_test_order}
+  mbpp: {metric: pass_at_1, prompt: fixed_3shot, decoding: greedy, sample_count: 374, sample_selection: full_frozen_official_test_order}
+  sharegpt:
+    metrics: [heldout_nll, prometheus_absolute_score]
+    judge: prometheus-7b-v2.0
+    judge_revision: 66ffb1fc20beebfb60a3964a957d9011723116c5
+    comparison_reference: frozen_first_assistant_response
+    judge_prompt: prometheus2_official_absolute_mistral_v1
+    score_range: [1, 5]
+    prompt_count: 200
+    sample_count: 200
+    sample_selection: frozen_sharegpt_judge_prompt_manifest_order

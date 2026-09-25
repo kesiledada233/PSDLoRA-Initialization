@@ -1,0 +1,2486 @@
+{
+  "method": "pissa",
+  "source": "PEFT LoraConfig/reset path",
+  "adapter_initialization_seconds": 24.811654139019083,
+  "gradient_estimation_seconds": 0.0,
+  "initialization_seconds_total": 24.811654139019083,
+  "trainable_parameter_count": 5046272,
+  "total_parameter_count": 7620662784,
+  "matrix_statistics_schema_version": 1,
+  "matrix_statistics": [
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00018104388436768204,
+      "std": 0.03302721306681633,
+      "variance": 0.0010907967807725072,
+      "frobenius_norm": 7.909015655517578,
+      "spectral_norm": 3.384519100189209,
+      "max_abs": 0.251953125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 4.171581895207055e-05,
+      "std": 0.0330047681927681,
+      "variance": 0.0010893146973103285,
+      "frobenius_norm": 7.903528690338135,
+      "spectral_norm": 3.3831725120544434,
+      "max_abs": 0.78515625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 5.54387916054111e-05,
+      "std": 0.010523810051381588,
+      "variance": 0.00011075057409470901,
+      "frobenius_norm": 2.5201303958892822,
+      "spectral_norm": 0.7890729308128357,
+      "max_abs": 0.0966796875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00022143169189803302,
+      "std": 0.02784932777285576,
+      "variance": 0.0007755850092507899,
+      "frobenius_norm": 2.5207130908966064,
+      "spectral_norm": 0.7892304062843323,
+      "max_abs": 0.400390625,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.1.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0002942295395769179,
+      "std": 0.02917635627090931,
+      "variance": 0.0008512597414664924,
+      "frobenius_norm": 6.987102031707764,
+      "spectral_norm": 2.2897894382476807,
+      "max_abs": 0.267578125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.1.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -8.711225746083073e-06,
+      "std": 0.02915273606777191,
+      "variance": 0.0008498819661326706,
+      "frobenius_norm": 6.981091022491455,
+      "spectral_norm": 2.2892932891845703,
+      "max_abs": 0.63671875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.1.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 1.4026406461198349e-05,
+      "std": 0.01300714910030365,
+      "variance": 0.00016918592154979706,
+      "frobenius_norm": 3.1147727966308594,
+      "spectral_norm": 0.8553794026374817,
+      "max_abs": 0.0751953125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.1.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00022832992544863373,
+      "std": 0.03441835939884186,
+      "variance": 0.0011846235720440745,
+      "frobenius_norm": 3.115262746810913,
+      "spectral_norm": 0.8554323315620422,
+      "max_abs": 0.21484375,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.2.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -4.1424889786867425e-05,
+      "std": 0.024340853095054626,
+      "variance": 0.0005924771539866924,
+      "frobenius_norm": 5.828816890716553,
+      "spectral_norm": 1.6672190427780151,
+      "max_abs": 0.2470703125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.2.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00011254524724790826,
+      "std": 0.024318065494298935,
+      "variance": 0.0005913682980462909,
+      "frobenius_norm": 5.823413372039795,
+      "spectral_norm": 1.665764570236206,
+      "max_abs": 0.2041015625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.2.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 3.203418600605801e-05,
+      "std": 0.011829359456896782,
+      "variance": 0.00013993374886922538,
+      "frobenius_norm": 2.8327407836914062,
+      "spectral_norm": 0.7787760496139526,
+      "max_abs": 0.0751953125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.2.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00011931225890293717,
+      "std": 0.0313008576631546,
+      "variance": 0.0009797437814995646,
+      "frobenius_norm": 2.8330509662628174,
+      "spectral_norm": 0.7790985703468323,
+      "max_abs": 0.33984375,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.3.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00016636073996778578,
+      "std": 0.025542117655277252,
+      "variance": 0.0006523997290059924,
+      "frobenius_norm": 6.116600036621094,
+      "spectral_norm": 1.9229352474212646,
+      "max_abs": 0.30078125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.3.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0002758770133368671,
+      "std": 0.025516986846923828,
+      "variance": 0.0006511166575364769,
+      "frobenius_norm": 6.110809803009033,
+      "spectral_norm": 1.9205466508865356,
+      "max_abs": 0.1796875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.3.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 5.800063445349224e-05,
+      "std": 0.01229296624660492,
+      "variance": 0.00015111701213754714,
+      "frobenius_norm": 2.9437811374664307,
+      "spectral_norm": 0.7783404588699341,
+      "max_abs": 0.1484375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.3.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0001323211909038946,
+      "std": 0.032528106123209,
+      "variance": 0.001058077672496438,
+      "frobenius_norm": 2.9441323280334473,
+      "spectral_norm": 0.7785187363624573,
+      "max_abs": 0.259765625,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.4.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -2.760882671282161e-05,
+      "std": 0.0240341629832983,
+      "variance": 0.0005776410107500851,
+      "frobenius_norm": 5.755370616912842,
+      "spectral_norm": 1.8211344480514526,
+      "max_abs": 0.322265625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.4.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 2.8196935090818442e-05,
+      "std": 0.024010589346289635,
+      "variance": 0.0005765084060840309,
+      "frobenius_norm": 5.749725341796875,
+      "spectral_norm": 1.8197877407073975,
+      "max_abs": 0.2060546875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.4.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -2.4125440177158453e-05,
+      "std": 0.013810510747134686,
+      "variance": 0.00019073020666837692,
+      "frobenius_norm": 3.3071537017822266,
+      "spectral_norm": 0.8690592646598816,
+      "max_abs": 0.07373046875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.4.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0010122568346560001,
+      "std": 0.03653008118271828,
+      "variance": 0.0013344468316063285,
+      "frobenius_norm": 3.3075947761535645,
+      "spectral_norm": 0.8689592480659485,
+      "max_abs": 0.2333984375,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.5.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00012524081103038043,
+      "std": 0.02258705347776413,
+      "variance": 0.0005101749557070434,
+      "frobenius_norm": 5.408915996551514,
+      "spectral_norm": 1.7271977663040161,
+      "max_abs": 0.392578125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.5.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0002996718103531748,
+      "std": 0.022565584629774094,
+      "variance": 0.0005092056235298514,
+      "frobenius_norm": 5.404168605804443,
+      "spectral_norm": 1.7260732650756836,
+      "max_abs": 0.1884765625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.5.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -8.44837268232368e-06,
+      "std": 0.013827432878315449,
+      "variance": 0.0001911978906719014,
+      "frobenius_norm": 3.311201572418213,
+      "spectral_norm": 0.8797720074653625,
+      "max_abs": 0.08056640625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.5.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0006763896672055125,
+      "std": 0.03658096492290497,
+      "variance": 0.00133816699963063,
+      "frobenius_norm": 3.3114967346191406,
+      "spectral_norm": 0.8797408938407898,
+      "max_abs": 0.298828125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.6.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -8.166642510332167e-05,
+      "std": 0.02332097291946411,
+      "variance": 0.0005438677617348731,
+      "frobenius_norm": 5.584615707397461,
+      "spectral_norm": 1.6605833768844604,
+      "max_abs": 0.310546875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.6.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00021540105808526278,
+      "std": 0.023295242339372635,
+      "variance": 0.0005426683346740901,
+      "frobenius_norm": 5.578658580780029,
+      "spectral_norm": 1.6596176624298096,
+      "max_abs": 0.201171875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.6.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -2.7438582037575543e-05,
+      "std": 0.013526702299714088,
+      "variance": 0.00018297166388947517,
+      "frobenius_norm": 3.239192485809326,
+      "spectral_norm": 0.8519888520240784,
+      "max_abs": 0.06005859375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.6.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 4.677855031332001e-05,
+      "std": 0.03579642251133919,
+      "variance": 0.001281383796595037,
+      "frobenius_norm": 3.2399251461029053,
+      "spectral_norm": 0.8525558710098267,
+      "max_abs": 0.310546875,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.7.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00014125181769486517,
+      "std": 0.0225736815482378,
+      "variance": 0.0005095711094327271,
+      "frobenius_norm": 5.405736923217773,
+      "spectral_norm": 1.5128021240234375,
+      "max_abs": 0.20703125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.7.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 1.2107775546610355e-06,
+      "std": 0.022550079971551895,
+      "variance": 0.0005085061420686543,
+      "frobenius_norm": 5.3999786376953125,
+      "spectral_norm": 1.511700987815857,
+      "max_abs": 0.2099609375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.7.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 4.3249957570878905e-07,
+      "std": 0.01470707356929779,
+      "variance": 0.00021629800903610885,
+      "frobenius_norm": 3.5218448638916016,
+      "spectral_norm": 0.9264434576034546,
+      "max_abs": 0.0986328125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.7.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0002032318152487278,
+      "std": 0.038912639021873474,
+      "variance": 0.001514193369075656,
+      "frobenius_norm": 3.5220179557800293,
+      "spectral_norm": 0.9262075424194336,
+      "max_abs": 0.26171875,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.8.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -9.538157428323757e-07,
+      "std": 0.021781237795948982,
+      "variance": 0.000474422296974808,
+      "frobenius_norm": 5.215867519378662,
+      "spectral_norm": 1.4065831899642944,
+      "max_abs": 0.234375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.8.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -5.502958447323181e-05,
+      "std": 0.021757593378424644,
+      "variance": 0.0004733928944915533,
+      "frobenius_norm": 5.210222244262695,
+      "spectral_norm": 1.404895544052124,
+      "max_abs": 0.2353515625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.8.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -4.9393067456549034e-05,
+      "std": 0.013366027735173702,
+      "variance": 0.00017865070549305528,
+      "frobenius_norm": 3.2007322311401367,
+      "spectral_norm": 0.8368419408798218,
+      "max_abs": 0.06982421875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.8.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0003407470940146595,
+      "std": 0.03536655008792877,
+      "variance": 0.0012507927604019642,
+      "frobenius_norm": 3.2011630535125732,
+      "spectral_norm": 0.8369652628898621,
+      "max_abs": 0.189453125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.9.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -7.62526979087852e-05,
+      "std": 0.022537413984537125,
+      "variance": 0.0005079350084997714,
+      "frobenius_norm": 5.396976470947266,
+      "spectral_norm": 1.532898187637329,
+      "max_abs": 0.234375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.9.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0003354228974785656,
+      "std": 0.02251112461090088,
+      "variance": 0.000506750715430826,
+      "frobenius_norm": 5.39124870300293,
+      "spectral_norm": 1.5318084955215454,
+      "max_abs": 0.2490234375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.9.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -7.498144987039268e-05,
+      "std": 0.014136235229671001,
+      "variance": 0.0001998331572394818,
+      "frobenius_norm": 3.3851964473724365,
+      "spectral_norm": 0.8776980638504028,
+      "max_abs": 0.0771484375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.9.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0005958161200396717,
+      "std": 0.03740040212869644,
+      "variance": 0.0013987900456413627,
+      "frobenius_norm": 3.3855273723602295,
+      "spectral_norm": 0.877460241317749,
+      "max_abs": 0.2236328125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.10.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00013271905481815338,
+      "std": 0.022360095754265785,
+      "variance": 0.0004999738885089755,
+      "frobenius_norm": 5.354578495025635,
+      "spectral_norm": 1.4727133512496948,
+      "max_abs": 0.169921875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.10.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00012311708997003734,
+      "std": 0.022338610142469406,
+      "variance": 0.0004990134621039033,
+      "frobenius_norm": 5.349420070648193,
+      "spectral_norm": 1.4717847108840942,
+      "max_abs": 0.3359375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.10.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -4.59650436823722e-05,
+      "std": 0.013712374493479729,
+      "variance": 0.00018802921113092452,
+      "frobenius_norm": 3.2836668491363525,
+      "spectral_norm": 0.8312295079231262,
+      "max_abs": 0.06201171875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.10.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0006175951566547155,
+      "std": 0.03628336638212204,
+      "variance": 0.0013164826668798923,
+      "frobenius_norm": 3.284471273422241,
+      "spectral_norm": 0.8317549824714661,
+      "max_abs": 0.2158203125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.11.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0001124906848417595,
+      "std": 0.021962840110063553,
+      "variance": 0.0004823663621209562,
+      "frobenius_norm": 5.259424209594727,
+      "spectral_norm": 1.429634928703308,
+      "max_abs": 0.302734375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.11.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00018363587150815874,
+      "std": 0.021940048784017563,
+      "variance": 0.0004813657433260232,
+      "frobenius_norm": 5.254081726074219,
+      "spectral_norm": 1.4283866882324219,
+      "max_abs": 0.3515625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.11.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -1.9822258764179423e-05,
+      "std": 0.013681392185389996,
+      "variance": 0.00018718049977906048,
+      "frobenius_norm": 3.276232957839966,
+      "spectral_norm": 0.8521277904510498,
+      "max_abs": 0.2275390625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.11.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 1.9632898329291493e-05,
+      "std": 0.03620104119181633,
+      "variance": 0.0013105153338983655,
+      "frobenius_norm": 3.2765443325042725,
+      "spectral_norm": 0.8524943590164185,
+      "max_abs": 0.2060546875,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.12.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -9.599175245966762e-05,
+      "std": 0.021872159093618393,
+      "variance": 0.00047839133185334504,
+      "frobenius_norm": 5.237690448760986,
+      "spectral_norm": 1.413892388343811,
+      "max_abs": 0.30078125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.12.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0002144002792192623,
+      "std": 0.021847780793905258,
+      "variance": 0.00047732549137435853,
+      "frobenius_norm": 5.232054233551025,
+      "spectral_norm": 1.4124077558517456,
+      "max_abs": 0.1708984375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.12.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -7.622092380188406e-05,
+      "std": 0.013616013340651989,
+      "variance": 0.0001853958092397079,
+      "frobenius_norm": 3.2606241703033447,
+      "spectral_norm": 0.835282027721405,
+      "max_abs": 0.07373046875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.12.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00044506590347737074,
+      "std": 0.03602532297372818,
+      "variance": 0.0012978238519281149,
+      "frobenius_norm": 3.2608888149261475,
+      "spectral_norm": 0.8354183435440063,
+      "max_abs": 0.2392578125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.13.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 6.604316149605438e-05,
+      "std": 0.02233036234974861,
+      "variance": 0.000498645065817982,
+      "frobenius_norm": 5.347387313842773,
+      "spectral_norm": 1.4642596244812012,
+      "max_abs": 0.1904296875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.13.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 7.785388152115047e-05,
+      "std": 0.022304166108369827,
+      "variance": 0.0004974758485332131,
+      "frobenius_norm": 5.341123580932617,
+      "spectral_norm": 1.4636415243148804,
+      "max_abs": 0.1435546875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.13.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 1.9586295820772648e-06,
+      "std": 0.013598723337054253,
+      "variance": 0.00018492527306079865,
+      "frobenius_norm": 3.2564327716827393,
+      "spectral_norm": 0.8244014978408813,
+      "max_abs": 0.07275390625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.13.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00020723028865177184,
+      "std": 0.035983871668577194,
+      "variance": 0.0012948389630764723,
+      "frobenius_norm": 3.2569420337677,
+      "spectral_norm": 0.8243424892425537,
+      "max_abs": 0.1845703125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.14.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00014871309394948184,
+      "std": 0.02282368205487728,
+      "variance": 0.000520920439157635,
+      "frobenius_norm": 5.46561336517334,
+      "spectral_norm": 1.4497652053833008,
+      "max_abs": 0.2431640625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.14.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -3.066239878535271e-05,
+      "std": 0.022800764068961143,
+      "variance": 0.0005198748549446464,
+      "frobenius_norm": 5.460014820098877,
+      "spectral_norm": 1.4483228921890259,
+      "max_abs": 0.353515625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.14.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 1.3901597412768751e-05,
+      "std": 0.013514569029211998,
+      "variance": 0.0001826435764087364,
+      "frobenius_norm": 3.2362823486328125,
+      "spectral_norm": 0.8480134606361389,
+      "max_abs": 0.10888671875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.14.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -2.058056998066604e-05,
+      "std": 0.03575971722602844,
+      "variance": 0.0012787573505192995,
+      "frobenius_norm": 3.236600637435913,
+      "spectral_norm": 0.848145067691803,
+      "max_abs": 0.2470703125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.15.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -6.455419497797266e-05,
+      "std": 0.022253762930631638,
+      "variance": 0.0004952299641445279,
+      "frobenius_norm": 5.329043388366699,
+      "spectral_norm": 1.49055814743042,
+      "max_abs": 0.259765625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.15.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00014424730034079403,
+      "std": 0.022229375317692757,
+      "variance": 0.0004941451479680836,
+      "frobenius_norm": 5.323293685913086,
+      "spectral_norm": 1.4891369342803955,
+      "max_abs": 0.1943359375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.15.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 3.03582946798997e-05,
+      "std": 0.014135577715933323,
+      "variance": 0.00019981454533990473,
+      "frobenius_norm": 3.3849990367889404,
+      "spectral_norm": 0.8706187605857849,
+      "max_abs": 0.08154296875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.15.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0007674172520637512,
+      "std": 0.037394288927316666,
+      "variance": 0.0013983328826725483,
+      "frobenius_norm": 3.3852572441101074,
+      "spectral_norm": 0.8704842925071716,
+      "max_abs": 0.171875,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.16.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -2.7142075850861147e-05,
+      "std": 0.022151436656713486,
+      "variance": 0.0004906861577183008,
+      "frobenius_norm": 5.304521560668945,
+      "spectral_norm": 1.4447110891342163,
+      "max_abs": 0.2314453125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.16.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -4.8362471716245636e-05,
+      "std": 0.022128403186798096,
+      "variance": 0.000489666243083775,
+      "frobenius_norm": 5.299014091491699,
+      "spectral_norm": 1.4438085556030273,
+      "max_abs": 0.283203125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.16.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -7.999384251888841e-05,
+      "std": 0.014435003511607647,
+      "variance": 0.00020836932526435703,
+      "frobenius_norm": 3.4567465782165527,
+      "spectral_norm": 0.9560442566871643,
+      "max_abs": 0.12060546875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.16.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 8.845166303217411e-05,
+      "std": 0.03819794952869415,
+      "variance": 0.0014590832870453596,
+      "frobenius_norm": 3.4572927951812744,
+      "spectral_norm": 0.9561363458633423,
+      "max_abs": 0.248046875,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.17.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -3.1519757612841204e-05,
+      "std": 0.02195785753428936,
+      "variance": 0.00048214750131592155,
+      "frobenius_norm": 5.258167266845703,
+      "spectral_norm": 1.401693344116211,
+      "max_abs": 0.19921875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.17.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0002363837993470952,
+      "std": 0.021931851282715797,
+      "variance": 0.0004810060781892389,
+      "frobenius_norm": 5.252239227294922,
+      "spectral_norm": 1.4004764556884766,
+      "max_abs": 0.5078125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.17.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 2.8811056836275384e-05,
+      "std": 0.01441279798746109,
+      "variance": 0.00020772874995600432,
+      "frobenius_norm": 3.451382875442505,
+      "spectral_norm": 0.9090145230293274,
+      "max_abs": 0.1416015625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.17.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00015380830154754221,
+      "std": 0.03814062476158142,
+      "variance": 0.001454707351513207,
+      "frobenius_norm": 3.4521234035491943,
+      "spectral_norm": 0.9097050428390503,
+      "max_abs": 0.26953125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.18.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 5.285385486786254e-05,
+      "std": 0.02228035219013691,
+      "variance": 0.0004964140825904906,
+      "frobenius_norm": 5.3354034423828125,
+      "spectral_norm": 1.446153163909912,
+      "max_abs": 0.2255859375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.18.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00014120926789473742,
+      "std": 0.02225697785615921,
+      "variance": 0.0004953730385750532,
+      "frobenius_norm": 5.329898357391357,
+      "spectral_norm": 1.445180058479309,
+      "max_abs": 0.2236328125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.18.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -7.84061849117279e-05,
+      "std": 0.014321661554276943,
+      "variance": 0.00020510998729150742,
+      "frobenius_norm": 3.4296035766601562,
+      "spectral_norm": 0.8781381845474243,
+      "max_abs": 0.0830078125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.18.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00017923065752256662,
+      "std": 0.037889622151851654,
+      "variance": 0.0014356233878061175,
+      "frobenius_norm": 3.429415225982666,
+      "spectral_norm": 0.878229022026062,
+      "max_abs": 0.2890625,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.19.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00017769228725228459,
+      "std": 0.021885713562369347,
+      "variance": 0.0004789844970218837,
+      "frobenius_norm": 5.241058349609375,
+      "spectral_norm": 1.5082759857177734,
+      "max_abs": 0.24609375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.19.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -3.319783354527317e-05,
+      "std": 0.021865732967853546,
+      "variance": 0.0004781102470587939,
+      "frobenius_norm": 5.236106872558594,
+      "spectral_norm": 1.5067753791809082,
+      "max_abs": 0.65234375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.19.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -1.8126720533473417e-05,
+      "std": 0.014708706177771091,
+      "variance": 0.00021634603035636246,
+      "frobenius_norm": 3.5222387313842773,
+      "spectral_norm": 0.9010348916053772,
+      "max_abs": 0.07568359375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.19.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.000483980227727443,
+      "std": 0.03891913965344429,
+      "variance": 0.0015146995428949594,
+      "frobenius_norm": 3.5228309631347656,
+      "spectral_norm": 0.9015885591506958,
+      "max_abs": 0.28125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.20.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00013469524856191128,
+      "std": 0.021701280027627945,
+      "variance": 0.00047094555338844657,
+      "frobenius_norm": 5.196820259094238,
+      "spectral_norm": 1.4298007488250732,
+      "max_abs": 0.341796875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.20.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00019859544408973306,
+      "std": 0.02167844958603382,
+      "variance": 0.0004699551500380039,
+      "frobenius_norm": 5.191470623016357,
+      "spectral_norm": 1.4291253089904785,
+      "max_abs": 0.2080078125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.20.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 4.095574240636779e-06,
+      "std": 0.015136604197323322,
+      "variance": 0.00022911677660886198,
+      "frobenius_norm": 3.6247031688690186,
+      "spectral_norm": 0.9247434139251709,
+      "max_abs": 0.1142578125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.20.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 6.90569868311286e-05,
+      "std": 0.040055010467767715,
+      "variance": 0.0016044037183746696,
+      "frobenius_norm": 3.625370740890503,
+      "spectral_norm": 0.9250220060348511,
+      "max_abs": 0.2216796875,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.21.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 1.7908793097376474e-06,
+      "std": 0.021250737830996513,
+      "variance": 0.00045159386354498565,
+      "frobenius_norm": 5.088830947875977,
+      "spectral_norm": 1.3576000928878784,
+      "max_abs": 0.1630859375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.21.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 3.047528662136756e-05,
+      "std": 0.021227266639471054,
+      "variance": 0.0004505968827288598,
+      "frobenius_norm": 5.083215713500977,
+      "spectral_norm": 1.3564889430999756,
+      "max_abs": 0.244140625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.21.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -2.3420941943186335e-05,
+      "std": 0.015105217695236206,
+      "variance": 0.0002281675988342613,
+      "frobenius_norm": 3.6171913146972656,
+      "spectral_norm": 0.9154072403907776,
+      "max_abs": 0.1328125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.21.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00014823305536992848,
+      "std": 0.03997204452753067,
+      "variance": 0.0015977644361555576,
+      "frobenius_norm": 3.6178815364837646,
+      "spectral_norm": 0.9157605767250061,
+      "max_abs": 0.255859375,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.22.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 3.719350206665695e-05,
+      "std": 0.021646220237016678,
+      "variance": 0.0004685588355641812,
+      "frobenius_norm": 5.1835432052612305,
+      "spectral_norm": 1.4283888339996338,
+      "max_abs": 0.1494140625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.22.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0003327305312268436,
+      "std": 0.021620159968733788,
+      "variance": 0.0004674313240684569,
+      "frobenius_norm": 5.177907943725586,
+      "spectral_norm": 1.4270806312561035,
+      "max_abs": 0.31640625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.22.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -1.8082482711179182e-05,
+      "std": 0.015884973108768463,
+      "variance": 0.000252332363743335,
+      "frobenius_norm": 3.8039145469665527,
+      "spectral_norm": 1.0075269937515259,
+      "max_abs": 0.103515625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.22.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0004115536867175251,
+      "std": 0.042033132165670395,
+      "variance": 0.0017667843494564295,
+      "frobenius_norm": 3.8045873641967773,
+      "spectral_norm": 1.0083205699920654,
+      "max_abs": 0.26953125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.23.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -9.251753363059834e-05,
+      "std": 0.021742358803749084,
+      "variance": 0.000472730171168223,
+      "frobenius_norm": 5.20660400390625,
+      "spectral_norm": 1.4313082695007324,
+      "max_abs": 0.1650390625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.23.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0001024207376758568,
+      "std": 0.02171943709254265,
+      "variance": 0.0004717339761555195,
+      "frobenius_norm": 5.2011260986328125,
+      "spectral_norm": 1.4304765462875366,
+      "max_abs": 0.296875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.23.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -2.1619875042233616e-05,
+      "std": 0.015650779008865356,
+      "variance": 0.0002449468884151429,
+      "frobenius_norm": 3.7478342056274414,
+      "spectral_norm": 0.9669095873832703,
+      "max_abs": 0.12158203125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.23.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -4.4766522478312254e-05,
+      "std": 0.04141297936439514,
+      "variance": 0.0017150348285213113,
+      "frobenius_norm": 3.748277187347412,
+      "spectral_norm": 0.9669495224952698,
+      "max_abs": 0.37109375,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.24.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 2.089673034788575e-05,
+      "std": 0.02113419771194458,
+      "variance": 0.00044665433233603835,
+      "frobenius_norm": 5.0609259605407715,
+      "spectral_norm": 1.383943796157837,
+      "max_abs": 0.345703125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.24.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.000192483130376786,
+      "std": 0.021112337708473206,
+      "variance": 0.0004457307804841548,
+      "frobenius_norm": 5.055898666381836,
+      "spectral_norm": 1.3828946352005005,
+      "max_abs": 0.1884765625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.24.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 3.0809918825980276e-05,
+      "std": 0.017085272818803787,
+      "variance": 0.00029190655914135277,
+      "frobenius_norm": 4.0913496017456055,
+      "spectral_norm": 1.0761710405349731,
+      "max_abs": 0.16015625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.24.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00017254819977097213,
+      "std": 0.045207638293504715,
+      "variance": 0.002043730579316616,
+      "frobenius_norm": 4.0917582511901855,
+      "spectral_norm": 1.0756654739379883,
+      "max_abs": 0.283203125,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.25.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 3.7632369640050456e-05,
+      "std": 0.02083798125386238,
+      "variance": 0.0004342214378993958,
+      "frobenius_norm": 4.989997386932373,
+      "spectral_norm": 1.3821457624435425,
+      "max_abs": 0.197265625,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.25.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00027891044737771153,
+      "std": 0.020810771733522415,
+      "variance": 0.00043308825115673244,
+      "frobenius_norm": 4.983921527862549,
+      "spectral_norm": 1.3810383081436157,
+      "max_abs": 0.271484375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.25.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.0001068908823071979,
+      "std": 0.01751875691115856,
+      "variance": 0.00030690684798173606,
+      "frobenius_norm": 4.195226192474365,
+      "spectral_norm": 1.2447166442871094,
+      "max_abs": 0.16796875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.25.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.001127184834331274,
+      "std": 0.04634110629558563,
+      "variance": 0.0021474980749189854,
+      "frobenius_norm": 4.195558547973633,
+      "spectral_norm": 1.2450251579284668,
+      "max_abs": 0.2890625,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.26.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.00014345781528390944,
+      "std": 0.021464014425873756,
+      "variance": 0.00046070394455455244,
+      "frobenius_norm": 5.140017986297607,
+      "spectral_norm": 1.4071176052093506,
+      "max_abs": 0.357421875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.26.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00027391823823563755,
+      "std": 0.02143947407603264,
+      "variance": 0.0004596510261762887,
+      "frobenius_norm": 5.1344451904296875,
+      "spectral_norm": 1.4057601690292358,
+      "max_abs": 0.248046875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.26.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": -4.949896720063407e-06,
+      "std": 0.019850214943289757,
+      "variance": 0.0003940309979952872,
+      "frobenius_norm": 4.753453254699707,
+      "spectral_norm": 1.2614425420761108,
+      "max_abs": 0.1845703125,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.26.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00034976715687662363,
+      "std": 0.052530135959386826,
+      "variance": 0.002759415190666914,
+      "frobenius_norm": 4.7545905113220215,
+      "spectral_norm": 1.261667013168335,
+      "max_abs": 0.46484375,
+      "nonzero_count": 8192,
+      "numel": 8192
+    },
+    {
+      "parameter": "base_model.model.model.layers.27.self_attn.q_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00011129595804959536,
+      "std": 0.02410568669438362,
+      "variance": 0.0005810841103084385,
+      "frobenius_norm": 5.772555351257324,
+      "spectral_norm": 1.9850711822509766,
+      "max_abs": 0.49609375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.27.self_attn.q_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        3584,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0003271656751167029,
+      "std": 0.024082807824015617,
+      "variance": 0.0005799816572107375,
+      "frobenius_norm": 5.767547607421875,
+      "spectral_norm": 1.9846622943878174,
+      "max_abs": 0.357421875,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.27.self_attn.v_proj.lora_A.default.weight",
+      "factor": "A",
+      "shape": [
+        16,
+        3584
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.00018166964582633227,
+      "std": 0.021878061816096306,
+      "variance": 0.0004786495992448181,
+      "frobenius_norm": 5.239234447479248,
+      "spectral_norm": 1.5122222900390625,
+      "max_abs": 0.302734375,
+      "nonzero_count": 57344,
+      "numel": 57344
+    },
+    {
+      "parameter": "base_model.model.model.layers.27.self_attn.v_proj.lora_B.default.weight",
+      "factor": "B",
+      "shape": [
+        512,
+        16
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.0002914923243224621,
+      "std": 0.05789356678724289,
+      "variance": 0.0033516648691147566,
+      "frobenius_norm": 5.239993572235107,
+      "spectral_norm": 1.5124363899230957,
+      "max_abs": 0.2265625,
+      "nonzero_count": 8192,
+      "numel": 8192
+    }
+  ],
+  "initialization_audit_seconds": 0.3813527000020258,
+  "initial_gradient_audit": {
+    "schema_version": 1,
+    "batch_scope": "one_complete_global_batch_before_optimizer_step_1",
+    "microbatch_count": 8,
+    "ordered_batch_sha256": "16c63f73de0ccfcf57c28f2a1fd0c4af437a610433b1db3e8d63563e4cf02816",
+    "lora_b": [
+      {
+        "parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 1.0014945268630981,
+        "gradient_max_abs": 0.13329698145389557,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 1.47347891330719,
+        "gradient_max_abs": 0.23149871826171875,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.1.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.37998175621032715,
+        "gradient_max_abs": 0.05702351778745651,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.1.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.3960646986961365,
+        "gradient_max_abs": 0.034570660442113876,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.2.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.20266318321228027,
+        "gradient_max_abs": 0.014357542619109154,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.2.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.1463773101568222,
+        "gradient_max_abs": 0.0103547852486372,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.3.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.47256961464881897,
+        "gradient_max_abs": 0.06787821650505066,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.3.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.8299869894981384,
+        "gradient_max_abs": 0.10243400931358337,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.4.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.5225028991699219,
+        "gradient_max_abs": 0.08363346755504608,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.4.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.19145265221595764,
+        "gradient_max_abs": 0.013479957357048988,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.5.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.7802887558937073,
+        "gradient_max_abs": 0.15277396142482758,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.5.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.287313848733902,
+        "gradient_max_abs": 0.020192284137010574,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.6.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.9077176451683044,
+        "gradient_max_abs": 0.1904374063014984,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.6.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.2561705708503723,
+        "gradient_max_abs": 0.018801363185048103,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.7.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.6636651754379272,
+        "gradient_max_abs": 0.08920501172542572,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.7.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.19453705847263336,
+        "gradient_max_abs": 0.018625887110829353,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.8.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.47617673873901367,
+        "gradient_max_abs": 0.06445910781621933,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.8.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.1948786824941635,
+        "gradient_max_abs": 0.019713833928108215,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.9.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.6239185333251953,
+        "gradient_max_abs": 0.06448520720005035,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.9.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.20036011934280396,
+        "gradient_max_abs": 0.012755073606967926,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.10.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.4432576298713684,
+        "gradient_max_abs": 0.05150141939520836,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.10.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.1580912172794342,
+        "gradient_max_abs": 0.016842564567923546,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.11.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.3869142532348633,
+        "gradient_max_abs": 0.0554850772023201,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.11.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.14731253683567047,
+        "gradient_max_abs": 0.007753371261060238,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.12.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.3795444071292877,
+        "gradient_max_abs": 0.03631487861275673,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.12.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.09585122019052505,
+        "gradient_max_abs": 0.006847041193395853,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.13.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.4051525294780731,
+        "gradient_max_abs": 0.048315346240997314,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.13.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.09553017467260361,
+        "gradient_max_abs": 0.007304628845304251,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.14.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.25845736265182495,
+        "gradient_max_abs": 0.03314788639545441,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.14.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.07425040751695633,
+        "gradient_max_abs": 0.0066977133974432945,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.15.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.4420202672481537,
+        "gradient_max_abs": 0.04697974771261215,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.15.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.12816987931728363,
+        "gradient_max_abs": 0.01958335004746914,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.16.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.26149702072143555,
+        "gradient_max_abs": 0.03134308010339737,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.16.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.09675779938697815,
+        "gradient_max_abs": 0.00822027400135994,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.17.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.35430192947387695,
+        "gradient_max_abs": 0.06392965465784073,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.17.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.08376291394233704,
+        "gradient_max_abs": 0.006427609361708164,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.18.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.2666454315185547,
+        "gradient_max_abs": 0.028165515512228012,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.18.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.1111765131354332,
+        "gradient_max_abs": 0.008934269659221172,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.19.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.24312947690486908,
+        "gradient_max_abs": 0.022481394931674004,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.19.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.07039309293031693,
+        "gradient_max_abs": 0.004865885712206364,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.20.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.32661372423171997,
+        "gradient_max_abs": 0.04305718094110489,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.20.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.07071202993392944,
+        "gradient_max_abs": 0.006548883393406868,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.21.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.16775038838386536,
+        "gradient_max_abs": 0.016032729297876358,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.21.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.08122880756855011,
+        "gradient_max_abs": 0.008148123510181904,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.22.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.2017413228750229,
+        "gradient_max_abs": 0.022745521739125252,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.22.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.07114236801862717,
+        "gradient_max_abs": 0.006878038868308067,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.23.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.16290287673473358,
+        "gradient_max_abs": 0.01796906068921089,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.23.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.053823716938495636,
+        "gradient_max_abs": 0.0037549661938101053,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.24.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.45863214135169983,
+        "gradient_max_abs": 0.2346256971359253,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.24.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.050343107432127,
+        "gradient_max_abs": 0.0038856344763189554,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.25.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.1208006888628006,
+        "gradient_max_abs": 0.01780824176967144,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.25.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.08942543715238571,
+        "gradient_max_abs": 0.0064931996166706085,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.26.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.30713075399398804,
+        "gradient_max_abs": 0.09362836927175522,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.26.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.026954781264066696,
+        "gradient_max_abs": 0.0017779242480173707,
+        "gradient_nonzero_count": 8192
+      },
+      {
+        "parameter": "base_model.model.model.layers.27.self_attn.q_proj.lora_B.default.weight",
+        "shape": [
+          3584,
+          16
+        ],
+        "gradient_frobenius_norm": 0.24429769814014435,
+        "gradient_max_abs": 0.03227296471595764,
+        "gradient_nonzero_count": 57344
+      },
+      {
+        "parameter": "base_model.model.model.layers.27.self_attn.v_proj.lora_B.default.weight",
+        "shape": [
+          512,
+          16
+        ],
+        "gradient_frobenius_norm": 0.43822145462036133,
+        "gradient_max_abs": 0.04667803645133972,
+        "gradient_nonzero_count": 8192
+      }
+    ],
+    "audit_seconds": 1.9543448949698359
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "expected_unique_runs": 231,
+  "matrix_memberships": 234,
+  "inventory_rows": 231,
+  "status_counts": {
+    "complete": 231
+  },
+  "matrix_sha256": {
+    "baseline_search_matrix.yaml": "c92422e2aba388cfb55e879ee17ea25558012b8d296acc851bdad11b890d4f9d",
+    "core_500step_matrix.yaml": "e0606537d7ec920caaa7985059899af50a9337298cf058d97ac891de8676f670",
+    "downstream_matrix.yaml": "3a30e6fdb8d9032c11da158eabd9c7e1ee488a01ecd87e4ae4e4e1840d67c502",
+    "mechanism_matrix.yaml": "eac083a48452cf466eafd0b3c14a4e1cfc50fab767adc137b6a438dc5594a595",
+    "scope_matrix.yaml": "4903b29d229b9ea1c52cef53ed48fc0dee5f0654f249d4406ad80d4b7257023f"
+  },
+  "inventory_sha256": "6614f3fc534e3c53cfc5f2baad638eeceb3f819856b4b839fe92754dbc849f16",
+  "aggregation_command": "python revision_experiments/scripts/aggregate_results.py",
+  "aggregation_arguments": {
+    "config_dir": "/home/b205/FDA_INIT/revision_experiments/config",
+    "runs_root": "/home/b205/FDA_INIT/revision_experiments/results/runs",
+    "evaluations_root": "/home/b205/FDA_INIT/revision_experiments/results/evaluations",
+    "audits_root": "/home/b205/FDA_INIT/revision_experiments/results/audits",
+    "output_root": "/home/b205/FDA_INIT/revision_experiments/results/aggregate",
+    "figures_root": "/home/b205/FDA_INIT/revision_experiments/results/figures",
+    "project_root": "/home/b205/FDA_INIT"
+  },
+  "aggregation_script_sha256": "be1fa4b5b1a7fc33e812aa399a342ce257fa9ff0f3673462d27f1116fa69fd90",
+  "reviewer_artifacts_generated": true,
+  "publication_blocker_count": 0,
+  "publication_blockers": [],
+  "publication": {
+    "table_count": 11,
+    "figure_file_count": 12,
+    "manifest": "/home/b205/FDA_INIT/revision_experiments/results/aggregate/reviewer_tables_manifest.json"
+  }
+}

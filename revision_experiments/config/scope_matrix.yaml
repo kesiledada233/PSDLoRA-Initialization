@@ -1,0 +1,58 @@
+schema_version: 1
+matrix_name: scope
+# Disabled after the author-approved 2026-09-12 scheduler stop. Re-enable only
+# from a clean committed amendment after the batch-equivalence preflight.
+enabled: false
+architecture_contract:
+  model: openpangu
+  hub_id: openpangu/openPangu-Embedded-7B-V1.1
+  revision: 0ae1841cbd53f5218f2ce5dc63083d5382cfc9f5
+  config_sha256: 8e300541888d68a6148d18720fa6b2df48f71e2e1606026d55b30af6dcb2ba37
+  weight_index_sha256: 9bf645e8399be6d99000eae64bd172b5c457d6d2c44d2257b47eb97a3c41aeda
+  num_hidden_layers: 34
+  projection_suffixes: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  lora_rank: 16
+  qv_lora_trainable_parameters: 7241728
+  all_linear_lora_trainable_parameters: 42057728
+all_linear:
+  # Deadline amendment (author-approved, 2026-09-12): retain the three-seed
+  # all-linear test on the representative CMMLU task.
+  model_task_pairs: [[openpangu, cmmlu]]
+  methods: [peft_default, iid_matched, powerlaw_global_a06]
+  seeds: [1107, 123, 42]
+  max_steps: 2500
+  # Protocol amendment (2026-09-12, HANDOFF): declare final checkpoint so the
+  # all-linear section produces evaluable adapters (latent gap fix); only the
+  # final step is evaluated — reviewers require final task metrics here.
+  checkpoints: [2500]
+  evaluation_checkpoints: [2500]
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+long_run:
+  model_task_pairs: [[openpangu, cmmlu]]
+  methods: [peft_default, iid_matched, powerlaw_global_a06]
+  # The 10k comparison is a descriptive paired boundary test (n=1), not a
+  # three-seed estimate. All three methods retain the same seed and stream.
+  seeds: [1107]
+  max_steps: 10000
+  checkpoints: [0, 100, 250, 500, 1000, 2500, 5000, 7500, 10000]
+  # Protocol amendment (2026-09-12, HANDOFF): evaluate this three-point subset;
+  # Gate 2 supplies the step-zero anchor without repeated generation.
+  evaluation_checkpoints: [500, 2500, 10000]
+  target_modules: [q_proj, v_proj]
+training_defaults:
+  precision: bf16
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  max_length: 512
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_steps: 100
+  scheduler: cosine
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+# Frozen per-task protocols (identical to downstream_2500step) so Task-7 scope
+# results carry contract-enforced task metrics.
+evaluation:
+  cmmlu: {metric: macro_accuracy, prompt: fixed_5shot_by_subject, decoding: greedy, sample_count: 11582, sample_selection: full_frozen_official_test_order}
+  mbpp: {metric: pass_at_1, prompt: fixed_3shot, decoding: greedy, sample_count: 374, sample_selection: full_frozen_official_test_order}

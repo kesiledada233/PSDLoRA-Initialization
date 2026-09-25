@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.parquet
+data/
+pretrained_models/
+.cache/

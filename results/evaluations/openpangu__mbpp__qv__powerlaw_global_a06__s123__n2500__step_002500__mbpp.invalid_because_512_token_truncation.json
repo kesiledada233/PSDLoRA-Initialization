@@ -1,0 +1,36 @@
+{
+  "run_id": "openpangu__mbpp__qv__powerlaw_global_a06__s123__n2500",
+  "checkpoint": 2500,
+  "task": "mbpp",
+  "metrics": {
+    "pass_at_1": 0.03208556149732621
+  },
+  "sample_count": 374,
+  "prediction_artifact": "revision_experiments/results/evaluations/openpangu__mbpp__qv__powerlaw_global_a06__s123__n2500__step_002500__mbpp.jsonl",
+  "prediction_sha256": "00050db742d7852fd598f08a86bf79ca4ae99b15f5ef4b68e6d3c305c7714e15",
+  "evaluation_seconds": 10.553806677999091,
+  "sample_set_hash": "2b98b107b05cac5e8cabe04e664e780fe54033f61d3661c69ac7528745f3e308",
+  "evaluation_config": {
+    "schema_version": 1,
+    "run_id": "openpangu__mbpp__qv__powerlaw_global_a06__s123__n2500",
+    "checkpoint": 2500,
+    "task": "mbpp",
+    "protocol": {
+      "metric": "pass_at_1",
+      "prompt": "fixed_3shot",
+      "decoding": "greedy",
+      "sample_count": 374,
+      "sample_selection": "full_frozen_official_test_order"
+    },
+    "dataset_split_hash": "5019c2dd63891c97ca38a5af5e78710f255a31d5798182eea9191a3a87ea8f5d",
+    "sample_manifest": {
+      "sample_count": 374,
+      "ordered_sample_ids_sha256": "45ac1fc7dc2e696b84524fbf55145927c80308bfe24f85d82b14f6e0d4c64c32",
+      "ordered_sample_content_sha256": "b889c5ee07691d5df69f09661d758b021bba3d549b8a7b7958afd735356e1cf4"
+    }
+  },
+  "evaluation_config_hash": "b03a10a9de6b0718293b2965153dfb158fbabd8bcbb8cec63d6033afa57d4eee",
+  "rescored": true,
+  "rescore_source": "/home/b205/FDA_INIT/revision_experiments/results/evaluations/openpangu__mbpp__qv__powerlaw_global_a06__s123__n2500__step_002500__mbpp.invalid_extraction_zero.jsonl",
+  "rescore_source_sha256": "c5cfe52b5a25715b98dc7064a396f558ee4eef29442e938a5f69d6c6e61858b4"
+}

@@ -1,0 +1,29 @@
+{
+  "captured_at_utc": "2026-09-03T02:34:41.823794+00:00",
+  "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+  "executable": "/home/b205/miniforge3/envs/minimind-exp/bin/python",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "machine": "x86_64",
+  "conda_environment": "minimind-exp",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "datasets": "3.6.0",
+    "accelerate": "1.14.0",
+    "peft": null,
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "pandas": "2.3.3",
+    "pyarrow": "24.0.0",
+    "matplotlib": "3.10.9",
+    "seaborn": null,
+    "PyYAML": "6.0.3"
+  },
+  "torch": {
+    "version": "2.11.0+cu128",
+    "cuda_build": "12.8",
+    "cuda_available": false,
+    "cuda_device_count": 0
+  },
+  "nvidia_smi": "Failed to initialize NVML: GPU access blocked by the operating system\nFailed to properly shut down NVML: GPU access blocked by the operating system"
+}

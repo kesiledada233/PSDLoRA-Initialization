@@ -1,0 +1,26 @@
+schema_version: 1
+matrix_name: core_500step
+enabled: false
+models: [openpangu]
+tasks: [gsm8k, cmmlu, sharegpt, mbpp]
+methods: [peft_default, iid_matched, powerlaw_global_a06, powerlaw_shuffle_a06]
+seeds: [1107, 123, 42]
+max_steps: 500
+checkpoints: [100, 250, 500]
+training:
+  precision: bf16
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  max_length: 512
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_steps: 100
+  scheduler: cosine
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: [q_proj, v_proj]
+logging:
+  gradient_coordinates: false
+  raw_loss_every_steps: 1
+  timing_every_steps: 1

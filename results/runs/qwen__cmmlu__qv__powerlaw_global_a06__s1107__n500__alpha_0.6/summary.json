@@ -1,0 +1,16 @@
+{
+  "raw_auc500": 480.5812605395913,
+  "validation_auc500": 613.6906959005256,
+  "validation_final_loss": 1.2624425082954007,
+  "validation_guardrail_metric": "validation_loss",
+  "validation_guardrail_value": 1.2624425082954007,
+  "validation_examples_evaluated": 67,
+  "steps_logged": 500,
+  "train_examples": 268,
+  "validation_examples": 67,
+  "test_examples": 11582,
+  "effective_method": "powerlaw_global_a06",
+  "effective_learning_rate": 5e-05,
+  "trainable_parameter_count": 5046272,
+  "initialization_seconds_total": 3.6450921180075966
+}

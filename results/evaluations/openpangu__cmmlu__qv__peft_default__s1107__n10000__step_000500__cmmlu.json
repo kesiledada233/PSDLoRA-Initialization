@@ -1,0 +1,33 @@
+{
+  "run_id": "openpangu__cmmlu__qv__peft_default__s1107__n10000",
+  "checkpoint": 500,
+  "task": "cmmlu",
+  "metrics": {
+    "macro_accuracy": 0.5007613219802882
+  },
+  "sample_count": 11582,
+  "prediction_artifact": "revision_experiments/results/evaluations/openpangu__cmmlu__qv__peft_default__s1107__n10000__step_000500__cmmlu.jsonl",
+  "prediction_sha256": "a90e12cac5f2c73dd23866b4391f1c502269f2ef1c742c02d8d40a26d9170878",
+  "evaluation_seconds": 1629.7486619770061,
+  "sample_set_hash": "c5fcd5f79503b4a9590576905e80b1cea954849cffedc3cb08f48c45fa28157e",
+  "evaluation_config": {
+    "schema_version": 1,
+    "run_id": "openpangu__cmmlu__qv__peft_default__s1107__n10000",
+    "checkpoint": 500,
+    "task": "cmmlu",
+    "protocol": {
+      "metric": "macro_accuracy",
+      "prompt": "fixed_5shot_by_subject",
+      "decoding": "greedy",
+      "sample_count": 11582,
+      "sample_selection": "full_frozen_official_test_order"
+    },
+    "dataset_split_hash": "fd0a5596e80d8029a0b54f04a7a250d2f40e5def742eb6ca088834f5c60a0d76",
+    "sample_manifest": {
+      "sample_count": 11582,
+      "ordered_sample_ids_sha256": "0f5aab4bcf6cc4b8893800d22b79af409a973946b0284fc8959c6ebb8fd0d51d",
+      "ordered_sample_content_sha256": "5cad594c402be6e6bcce53b5552bcef36806aa5c3ddd8da1be67c332c8718e29"
+    }
+  },
+  "evaluation_config_hash": "66932c60e906fa8654f8bd7d921c347a614127a0d6f10b152865371a3edcace0"
+}

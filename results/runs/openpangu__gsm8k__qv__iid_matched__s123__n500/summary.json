@@ -1,0 +1,16 @@
+{
+  "raw_auc500": 683.8060391955078,
+  "validation_auc500": null,
+  "validation_final_loss": null,
+  "validation_guardrail_metric": null,
+  "validation_guardrail_value": null,
+  "validation_examples_evaluated": 0,
+  "steps_logged": 500,
+  "train_examples": 7473,
+  "validation_examples": 0,
+  "test_examples": 1319,
+  "effective_method": "iid_matched",
+  "effective_learning_rate": 5e-05,
+  "trainable_parameter_count": 7241728,
+  "initialization_seconds_total": 0.7618027930002427
+}
