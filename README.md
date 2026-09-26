@@ -35,3 +35,7 @@ python experiments/collect_all_results.py
 - The exploratory pipeline originally released with the first submission is superseded. Its legacy openPangu entry point copied input IDs into labels without masking padding positions, which produced anomalous absolute losses; the controlled audit is in `results/audits/`. Every result in this repository comes from the corrected pipeline.
 - Matched-scale controls (i.i.d. samples rescaled to the same mean, standard deviation, and Frobenius norm) recover much of the early-loss advantage over PEFT-default; a substantial part of the benefit therefore follows from the initialization scale itself. Endpoint task results are reported with three paired seeds in the manuscript.
 - Dataset licenses are respected: benchmarks are not redistributed; download instructions follow their original sources.
+
+## License
+
+The openPangu model artifacts used in this work are governed by the OPENPANGU MODEL LICENSE AGREEMENT VERSION 1.0 (see OPENPANGU_LICENSE). No openPangu model weights are redistributed in this repository.
