@@ -1,0 +1,57 @@
+schema_version: 1
+matrix_name: integration_smoke
+purpose: integration_smoke
+enabled: true
+training_defaults:
+  precision: bf16
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  max_length: 512
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_steps: 1
+  scheduler: cosine
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: [q_proj, v_proj]
+runs:
+  - case: mbpp_adapter_and_executor
+    model: openpangu
+    task: mbpp
+    method: peft_default
+    seed: 1107
+    max_steps: 1
+    checkpoints: [1]
+  - case: lora_one_initialization
+    model: qwen
+    task: cmmlu
+    method: lora_one
+    seed: 1107
+    max_steps: 1
+    checkpoints: [1]
+    training_overrides: {lora_alpha: 16, use_rslora: true}
+    gradient_batches: 8
+    gradient_batch_size: 1
+    gradient_max_length: 1024
+    stable_gamma: 128
+  - case: gradient_logger_20step
+    model: openpangu
+    task: cmmlu
+    method: powerlaw_global_a06
+    seed: 1107
+    max_steps: 20
+    checkpoints: [20]
+    logging:
+      gradient_coordinates: true
+      coordinate_seed: 20260903
+      coordinates_per_matrix: 64
+      layers: [first, middle, last]
+      full_matrix_steps: [0, 10, 20]
+evaluation:
+  mbpp:
+    metric: pass_at_1
+    prompt: fixed_3shot
+    decoding: greedy
+    sample_count: 374
+    sample_selection: full_frozen_official_test_order

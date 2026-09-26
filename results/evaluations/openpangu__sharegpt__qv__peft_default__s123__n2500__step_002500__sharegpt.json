@@ -1,0 +1,54 @@
+{
+  "run_id": "openpangu__sharegpt__qv__peft_default__s123__n2500",
+  "checkpoint": 2500,
+  "task": "sharegpt",
+  "metrics": {
+    "heldout_nll": 1.2003153503036637,
+    "prometheus_absolute_score": 1.715,
+    "prometheus_judged_samples": 200,
+    "prometheus_unjudgeable_samples": 0
+  },
+  "sample_count": 200,
+  "prediction_artifact": "revision_experiments/results/evaluations/openpangu__sharegpt__qv__peft_default__s123__n2500__step_002500__sharegpt_judged.jsonl",
+  "prediction_sha256": "c42d4801ebe246b5b3d1b571ef716052703476951f7b06a69822e101af7fade8",
+  "candidate_artifact": "revision_experiments/results/evaluations/openpangu__sharegpt__qv__peft_default__s123__n2500__step_002500__sharegpt_candidates.jsonl",
+  "candidate_sha256": "6d7608bdbef89e5c1c7fabb678f8f9edb7eddeef59d4d88d6ede0194d11796b2",
+  "candidate_manifest_artifact": "revision_experiments/results/evaluations/openpangu__sharegpt__qv__peft_default__s123__n2500__step_002500__sharegpt_candidates.manifest.json",
+  "candidate_manifest_sha256": "903b51203289e5d6f5c1540b1f6b02a263911f0fded9672972c6742c11f0d81a",
+  "judge_artifact": "revision_experiments/results/evaluations/openpangu__sharegpt__qv__peft_default__s123__n2500__step_002500__sharegpt_judged.jsonl",
+  "judge_sha256": "c42d4801ebe246b5b3d1b571ef716052703476951f7b06a69822e101af7fade8",
+  "sample_set_hash": "e19354783793c992fb5c6cc00a4db2819d535b2472ab0abf9cd55cfbbbd07a58",
+  "evaluation_config": {
+    "schema_version": 1,
+    "run_id": "openpangu__sharegpt__qv__peft_default__s123__n2500",
+    "checkpoint": 2500,
+    "task": "sharegpt",
+    "protocol": {
+      "metrics": [
+        "heldout_nll",
+        "prometheus_absolute_score"
+      ],
+      "judge": "prometheus-7b-v2.0",
+      "judge_revision": "66ffb1fc20beebfb60a3964a957d9011723116c5",
+      "comparison_reference": "frozen_first_assistant_response",
+      "judge_prompt": "prometheus2_official_absolute_mistral_v1",
+      "score_range": [
+        1,
+        5
+      ],
+      "prompt_count": 200,
+      "sample_count": 200,
+      "sample_selection": "frozen_sharegpt_judge_prompt_manifest_order"
+    },
+    "dataset_split_hash": "25c61a9528f2cda38748440210a45f18115ac15791b5e7c2efbc06356b0ba212",
+    "sample_manifest": {
+      "sample_count": 200,
+      "ordered_sample_ids_sha256": "09932ca35b6daf0112452b8f033a0619ccbf1a9ca724b4c4d723dc413fe77321",
+      "ordered_sample_content_sha256": "8947a15f47e4591a851c4ec1502aac294dd4bcd5f65194f686af1e8261a23457"
+    }
+  },
+  "evaluation_config_hash": "bb0e0a39edd096be0f70c13e9b8b387701cfdb5460fdbd9b78ad19fd01ef68a9",
+  "candidate_generation_seconds": 2066.558284355997,
+  "judge_seconds": 1013.9003991390055,
+  "evaluation_seconds": 3080.4586834950023
+}

@@ -1,0 +1,66 @@
+{
+  "captured_at_utc": "2026-09-03T03:16:36.567327+00:00",
+  "cpu_only": true,
+  "models": {
+    "openpangu": {
+      "checkpoint": "openpangu/openPangu-Embedded-7B-V1.1@0ae1841cbd53f5218f2ce5dc63083d5382cfc9f5",
+      "tokenizer_class": "PanguTokenizer",
+      "vocab_size": 153376,
+      "pad_token_id": 0,
+      "eos_token_id": 45892,
+      "chat_template_hash": "be2a7e2cc9168eae1ca03a8b2a5a0a649b4db2bfc494c92c56e8d8431e226c86",
+      "tasks": {
+        "gsm8k": {
+          "token_count": 114,
+          "train_count": 7473,
+          "test_count": 1319
+        },
+        "cmmlu": {
+          "token_count": 44,
+          "train_count": 335,
+          "test_count": 11582
+        },
+        "mbpp": {
+          "token_count": 166,
+          "train_count": 600,
+          "test_count": 374
+        },
+        "sharegpt": {
+          "token_count": 47,
+          "train_count": 18623,
+          "test_count": 2069
+        }
+      }
+    },
+    "qwen": {
+      "checkpoint": "Qwen/Qwen2.5-7B@e25af2efae60472008fbeaf5fb7c4274a87f78d4",
+      "tokenizer_class": "Qwen2Tokenizer",
+      "vocab_size": 151665,
+      "pad_token_id": 151643,
+      "eos_token_id": 151643,
+      "chat_template_hash": "06d9597b76804e7ec3014f7fa84bf176654ac3695d6c604fe70deb062d724ede",
+      "tasks": {
+        "gsm8k": {
+          "token_count": 127,
+          "train_count": 7473,
+          "test_count": 1319
+        },
+        "cmmlu": {
+          "token_count": 50,
+          "train_count": 335,
+          "test_count": 11582
+        },
+        "mbpp": {
+          "token_count": 170,
+          "train_count": 600,
+          "test_count": 374
+        },
+        "sharegpt": {
+          "token_count": 44,
+          "train_count": 18623,
+          "test_count": 2069
+        }
+      }
+    }
+  }
+}

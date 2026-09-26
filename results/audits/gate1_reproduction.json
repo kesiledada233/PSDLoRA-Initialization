@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "gate_id": "gate1-r",
+  "gate_passed": true,
+  "captured_at_utc": "2026-09-04T17:21:56.621636+00:00",
+  "provenance_status": "reconstructed_without_exact_submitted_config_or_git_history",
+  "reconstructed_git_commit": "27f8edfd3b2b6fc0cab1084e3ba1c6d90312a268",
+  "submitted_manifest_sha256": "0df1a6d11f2b614ebc3108b52b556e80a8ebcee2ef13a85b90b46f7c2b7995a7",
+  "submitted_artifacts": {
+    "configs": [
+      "legacy_artifacts/submission/FDT_Init/train_openpangu_fda_lora_final.py",
+      "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/results.json",
+      "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/results.json",
+      "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/results.json"
+    ],
+    "logs": [
+      "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/training_log.csv",
+      "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/training_log.csv",
+      "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/training_log.csv"
+    ],
+    "checkpoints": [
+      "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/final_model",
+      "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/final_model",
+      "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/final_model"
+    ]
+  },
+  "replay": {
+    "model": "openpangu",
+    "method": "peft_default",
+    "task": "gsm8k",
+    "seed": 1107,
+    "command": [
+      "python",
+      "revision_experiments/scripts/run_gate1_replay.py",
+      "--config",
+      "revision_experiments/config/gate1_replay.yaml",
+      "--device",
+      "cuda:0"
+    ],
+    "exit_code": 0,
+    "evidence_files": [
+      {
+        "kind": "config",
+        "path": "revision_experiments/results/gates/gate1_reproduction/attempt_2/config.yaml",
+        "sha256": "be36d141433fd592bb3378baccdbf9a9860726bb80adc0c67d336e8b26f4bcf2"
+      },
+      {
+        "kind": "raw_loss",
+        "path": "revision_experiments/results/gates/gate1_reproduction/attempt_2/raw_loss.jsonl",
+        "sha256": "ac2c9edc9390c6ea8a47ef0c05a714ffacab7ba9562635d021984a531e8982f6"
+      },
+      {
+        "kind": "summary",
+        "path": "revision_experiments/results/gates/gate1_reproduction/attempt_2/summary.json",
+        "sha256": "9ce9715abd494eb8cb33215c26168db31bb4c8049657ef18f3614422c8245d9c"
+      },
+      {
+        "kind": "checkpoint",
+        "path": "revision_experiments/results/gates/gate1_reproduction/attempt_2/checkpoint/adapter_model.safetensors",
+        "sha256": "a7f7c7ee76d1f60bd401c3f356ec91c2ece98c81c1731e4ff42e61a0e4e8acba"
+      }
+    ]
+  },
+  "comparison": {
+    "mode": "multi_seed_range",
+    "configuration_status": "reconstructed_from_legacy_evidence",
+    "data_order_status": "deterministic_reconstruction",
+    "curve_shape_match": true,
+    "auc500_within_submitted_seed_range": true,
+    "endpoint_loss_within_submitted_seed_range": true,
+    "reused_as_revision_result": false
+  },
+  "declared_adaptations": [
+    "Ascend NPU is replaced by one CUDA GPU; absolute wall time is not compared.",
+    "The submitted absolute model path is replaced by the hash-verified local pinned checkpoint.",
+    "The audited temporary CUDA compatibility overlay is used; source model files remain unchanged.",
+    "The replay stops after 500 legacy microsteps because Gate 1-R compares only the early curve.",
+    "Periodic validation is skipped because it does not update parameters or consume the training loader."
+  ],
+  "limitations": [
+    "The missing original config.json means batch, optimizer, scheduler and logging fields are reconstructed from entrypoint defaults.",
+    "Seed 1107 is inferred from the unsuffixed run name plus the entrypoint default; seeds 123 and 42 are explicit in directory names.",
+    "Framework, accelerator and exact shuffled indices cannot be made bitwise identical to the submitted NPU run."
+  ],
+  "reviewed_by": "b205",
+  "notes": "Bounded CUDA reconstruction matched the three-seed legacy AUC500 and step-500 loss ranges; it is a provenance sanity check and is not reused as a revision result."
+}

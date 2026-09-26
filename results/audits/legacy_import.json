@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "profile": "openpangu_gsm8k_peft_default_three_seed",
+  "captured_at_utc": "2026-09-04T16:06:42.422475+00:00",
+  "recovery_root": "FDA_INIT_legacy_recovery_20260904_1816",
+  "recovery_report_sha256": "eef38d2eea4bcefe06692ec0fb720f054eb9dcffa0e4a3154748185060fdc131",
+  "copy_verification_sha256": "f1b163c7ee967117ac384296b0deeac99a06fb79a4f7d681ab620b39dd3267c1",
+  "source_package_manifest_sha256": "860c024c58a29d73448451391c2662e06c5af35dc88335bad276ea44d2e8ce5e",
+  "selected_file_count": 13,
+  "selected_files": [
+    {
+      "category": "configs",
+      "source": "legacy_recovery/candidates/source_code/FDT_Init/train_openpangu_fda_lora_final.py",
+      "destination": "FDT_Init/train_openpangu_fda_lora_final.py",
+      "role": "legacy_training_entrypoint_with_runtime_defaults",
+      "size_bytes": 36235,
+      "sha256": "2c618d9a3f63a4e2973639985595e9f9e785a5875bd9ee6f5a95d01632d4f982"
+    },
+    {
+      "category": "configs",
+      "source": "legacy_recovery/candidates/derived_outputs/FDT_Init/outputs_gsm8k/baseline/results.json",
+      "destination": "FDT_Init/outputs_gsm8k/baseline/results.json",
+      "role": "legacy_run_summary_and_partial_runtime_configuration_seed_1107",
+      "size_bytes": 1218,
+      "sha256": "2d87bd63ef265804d7f9bffafd2ca65355ecae6e981714ae05d6e9648351b755"
+    },
+    {
+      "category": "logs",
+      "source": "legacy_artifacts/submission/FDT_Init__outputs_gsm8k__baseline--fc733e5d3f/logs/training_log.csv",
+      "destination": "FDT_Init/outputs_gsm8k/baseline/training_log.csv",
+      "role": "raw_per_microbatch_loss_seed_1107",
+      "size_bytes": 190442,
+      "sha256": "59903dcdb07a1a64123abc67c614aa8224a49541e38177c1029288ecb50bc605"
+    },
+    {
+      "category": "checkpoints",
+      "source": "legacy_artifacts/submission/FDT_Init__outputs_gsm8k__baseline--fc733e5d3f/checkpoints/final_model/adapter_config.json",
+      "destination": "FDT_Init/outputs_gsm8k/baseline/final_model/adapter_config.json",
+      "role": "peft_adapter_configuration_seed_1107",
+      "size_bytes": 872,
+      "sha256": "0ebed571bd68df59ad14ac07d97ae6a48ef4a3aa075c44b3578f32ffb8f940c0"
+    },
+    {
+      "category": "checkpoints",
+      "source": "legacy_artifacts/submission/FDT_Init__outputs_gsm8k__baseline--fc733e5d3f/checkpoints/final_model/adapter_model.safetensors",
+      "destination": "FDT_Init/outputs_gsm8k/baseline/final_model/adapter_model.safetensors",
+      "role": "peft_adapter_weights_seed_1107",
+      "size_bytes": 28985168,
+      "sha256": "c5ae99ff25ab679329cb7dc8c87783cefbd9f0723c415ace4ef639429feeaa39"
+    },
+    {
+      "category": "configs",
+      "source": "legacy_recovery/candidates/derived_outputs/FDT_Init/outputs_gsm8k/baseline_seed123/results.json",
+      "destination": "FDT_Init/outputs_gsm8k/baseline_seed123/results.json",
+      "role": "legacy_run_summary_and_partial_runtime_configuration_seed_123",
+      "size_bytes": 1221,
+      "sha256": "7c4fbea2679b9bf80c263a7cded52e0ef6cfb75011bd421a2f5270247d8a18a6"
+    },
+    {
+      "category": "logs",
+      "source": "legacy_artifacts/submission/FDT_Init__outputs_gsm8k__baseline_seed123--92d16c983a/logs/training_log.csv",
+      "destination": "FDT_Init/outputs_gsm8k/baseline_seed123/training_log.csv",
+      "role": "raw_per_microbatch_loss_seed_123",
+      "size_bytes": 189630,
+      "sha256": "4e0792e68c3f230dd574c473afe91c43da777d370f4fa47a2608d1708832e419"
+    },
+    {
+      "category": "checkpoints",
+      "source": "legacy_artifacts/submission/FDT_Init__outputs_gsm8k__baseline_seed123--92d16c983a/checkpoints/final_model/adapter_config.json",
+      "destination": "FDT_Init/outputs_gsm8k/baseline_seed123/final_model/adapter_config.json",
+      "role": "peft_adapter_configuration_seed_123",
+      "size_bytes": 872,
+      "sha256": "c51dbe0c1c3fb993589b452a9b582b992c5676307e8aa893aeab53964467dde1"
+    },
+    {
+      "category": "checkpoints",
+      "source": "legacy_artifacts/submission/FDT_Init__outputs_gsm8k__baseline_seed123--92d16c983a/checkpoints/final_model/adapter_model.safetensors",
+      "destination": "FDT_Init/outputs_gsm8k/baseline_seed123/final_model/adapter_model.safetensors",
+      "role": "peft_adapter_weights_seed_123",
+      "size_bytes": 28985168,
+      "sha256": "7bb44bb0970fbb76dbd55617d8f3c255498ab7d8b0d9ab7afb89952f22e368ef"
+    },
+    {
+      "category": "configs",
+      "source": "legacy_recovery/candidates/derived_outputs/FDT_Init/outputs_gsm8k/baseline_seed42/results.json",
+      "destination": "FDT_Init/outputs_gsm8k/baseline_seed42/results.json",
+      "role": "legacy_run_summary_and_partial_runtime_configuration_seed_42",
+      "size_bytes": 1220,
+      "sha256": "dd9009c4a057459dc8625943f160dc28d494881d3871b26aad6d5bed8d60d35a"
+    },
+    {
+      "category": "logs",
+      "source": "legacy_artifacts/submission/FDT_Init__outputs_gsm8k__baseline_seed42--36aa4ec4bd/logs/training_log.csv",
+      "destination": "FDT_Init/outputs_gsm8k/baseline_seed42/training_log.csv",
+      "role": "raw_per_microbatch_loss_seed_42",
+      "size_bytes": 190266,
+      "sha256": "caa8b915efce65ac80207549a421d0d709c11103ef839a65e7bdebf91ebd3156"
+    },
+    {
+      "category": "checkpoints",
+      "source": "legacy_artifacts/submission/FDT_Init__outputs_gsm8k__baseline_seed42--36aa4ec4bd/checkpoints/final_model/adapter_config.json",
+      "destination": "FDT_Init/outputs_gsm8k/baseline_seed42/final_model/adapter_config.json",
+      "role": "peft_adapter_configuration_seed_42",
+      "size_bytes": 872,
+      "sha256": "c51dbe0c1c3fb993589b452a9b582b992c5676307e8aa893aeab53964467dde1"
+    },
+    {
+      "category": "checkpoints",
+      "source": "legacy_artifacts/submission/FDT_Init__outputs_gsm8k__baseline_seed42--36aa4ec4bd/checkpoints/final_model/adapter_model.safetensors",
+      "destination": "FDT_Init/outputs_gsm8k/baseline_seed42/final_model/adapter_model.safetensors",
+      "role": "peft_adapter_weights_seed_42",
+      "size_bytes": 28985168,
+      "sha256": "17e9b15050d565977eef3b5841aa856dbe513d08285b18348e2ac6499db8d35f"
+    }
+  ],
+  "canonical_manifest": "legacy_artifacts/submission/SHA256SUMS",
+  "canonical_manifest_sha256": "0df1a6d11f2b614ebc3108b52b556e80a8ebcee2ef13a85b90b46f7c2b7995a7",
+  "source_files_unchanged": true,
+  "configuration_status": "reconstructed_from_legacy_entrypoint_defaults_run_summaries_logs_and_adapter_configs",
+  "limitations": [
+    "The original per-run config.json files were not copied by the local recovery tool.",
+    "The original command line and submitted Git/environment snapshots remain unavailable.",
+    "Imported legacy runs are provenance/comparison evidence only and cannot be reused as revision results."
+  ]
+}

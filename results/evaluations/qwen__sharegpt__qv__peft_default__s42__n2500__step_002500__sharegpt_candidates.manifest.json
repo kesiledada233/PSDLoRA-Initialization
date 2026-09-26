@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "run_id": "qwen__sharegpt__qv__peft_default__s42__n2500",
+  "checkpoint": 2500,
+  "sample_count": 200,
+  "sample_set_hash": "e19354783793c992fb5c6cc00a4db2819d535b2472ab0abf9cd55cfbbbd07a58",
+  "candidate_artifact": "revision_experiments/results/evaluations/qwen__sharegpt__qv__peft_default__s42__n2500__step_002500__sharegpt_candidates.jsonl",
+  "candidate_sha256": "2920d93c2dd3d267a68714e1b95685187e891161a39e7de43a5210f292d6e971",
+  "candidate_generation_seconds": 1788.7693622579973
+}

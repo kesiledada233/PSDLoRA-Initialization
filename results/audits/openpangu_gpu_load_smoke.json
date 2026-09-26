@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-09-03T07:41:48.099997+00:00",
+  "model": "openpangu",
+  "checkpoint": "openpangu/openPangu-Embedded-7B-V1.1@0ae1841cbd53f5218f2ce5dc63083d5382cfc9f5",
+  "checkpoint_verification_sha256": "3c2196fe774fb13a68481b6c412d7fbcfb043af08a75cd9c53ab38fb559f4985",
+  "model_loader_provenance": {
+    "mode": "temporary_cuda_source_overlay",
+    "patch_id": "openpangu-cuda-disable-unconditional-torch-npu-v1",
+    "original_modeling_sha256": "f15eaf322af8a0b0f16b26795eb68af836179413d3dbfa4dc44505db6c8b0d6f",
+    "semantic_scope": "disable_unconditional_torch_npu_import_and_npu_fused_inference_branch"
+  },
+  "precision": "bf16",
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "peak_memory_allocated_bytes": 16089037312,
+  "input_token_count": 11,
+  "logits_shape": [
+    1,
+    11,
+    153376
+  ],
+  "logits_dtype": "torch.bfloat16",
+  "logits_abs_max": 19.5,
+  "passed": true
+}

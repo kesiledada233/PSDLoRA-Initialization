@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "matrix": "revision_experiments/config/smoke/integration_smoke.yaml",
+  "matrix_sha256": "88599da8d1514a6a360c9fee0584e878e789c01a936e89f5f9cd6d82c848fcad",
+  "cases": [
+    {
+      "case": "mbpp_adapter_and_executor",
+      "run_id": "openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor",
+      "passed": true,
+      "mbpp": {
+        "sample_count": 3,
+        "passes": 0,
+        "pass_at_1": 0.0
+      }
+    },
+    {
+      "case": "lora_one_initialization",
+      "run_id": "qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization",
+      "passed": true,
+      "initialized_modules": 56
+    },
+    {
+      "case": "gradient_logger_20step",
+      "run_id": "openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step",
+      "passed": true,
+      "gradient_steps": 21
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "revision_experiments/config/smoke/integration_smoke.yaml",
+      "sha256": "88599da8d1514a6a360c9fee0584e878e789c01a936e89f5f9cd6d82c848fcad"
+    },
+    {
+      "path": "revision_experiments/results/smoke/evaluations/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor__step_000001__mbpp__first_000003_smoke.json",
+      "sha256": "998957e9f99c976895303071f5c7b8e564243a581dac9f2cf77c3b7d76fa55bb"
+    },
+    {
+      "path": "revision_experiments/results/smoke/evaluations/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor__step_000001__mbpp__first_000003_smoke.jsonl",
+      "sha256": "0df0fa1a7d2e8c2ac8b4b00e8b4eea7795fee1b9e911c7895d9c036325898824"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/COMPLETED",
+      "sha256": "37a40f08d8548dba289b9b0bb35bcf63b359f6d37ee86044ebc6b6da080b9ec1"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/checkpoints/step_000020/adapter_config.json",
+      "sha256": "46a01d8511a5afa97be16f87928839b8d26a2bbac9c8ac2666befee868dfcd31"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/checkpoints/step_000020/adapter_model.safetensors",
+      "sha256": "0d42ef9215c8539cb427dd0ef06b65be4567e0f86c36315b6c2a7ccd2e7e6f9b"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/config.yaml",
+      "sha256": "88f36d0889506c9dcabfd1f8d30d1613d68be586fd2ef898ca16a8a4940541c7"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradient_diagnostics.jsonl",
+      "sha256": "db9adbb4763702351e01925f3a89bc621364c8744a61f52f2727cbfcb60c88a3"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight.npy",
+      "sha256": "a7cd5feb4d63f25379705213ad94e5dcb6344063419077cbf9e11fe8f95005e1"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight.npy",
+      "sha256": "9975e3dcf2174d4ea08ab0f6217157135583fba45465be0851ea693f93065eff"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight.npy",
+      "sha256": "f30bdc328c1fd49d44bb39e79f2790bbaa7225c078051e39d4061bf46e67c422"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight.npy",
+      "sha256": "5962dcce69e62fb2fbef782f2569a8f4e71ef7810e3a5ae0d1184c3bdb4d41cd"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.17.self_attn.q_proj.lora_A.default.weight.npy",
+      "sha256": "5abe98022d3ae4fd988fc161298263ba2b50ca3e8a429742f7dcd3934f339056"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.17.self_attn.q_proj.lora_B.default.weight.npy",
+      "sha256": "93f1afcb9e95c334812a647a1b216b2d61a176e50b6f0b5637bb235788ca3fe4"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.17.self_attn.v_proj.lora_A.default.weight.npy",
+      "sha256": "784462f432eadd00f1b093c9b269949aeb3b5d7731e99e0ed8d798422de8f6b7"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.17.self_attn.v_proj.lora_B.default.weight.npy",
+      "sha256": "64acd02f03eb31aaa7b6e7682f2d19ab5a0254ea2abe55dd7fb5ac4be99d68f6"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.33.self_attn.q_proj.lora_A.default.weight.npy",
+      "sha256": "a28e9abe3d279323bf602b81e90d7243b3a9d8e14d612725e4fd168a851c56b6"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.33.self_attn.q_proj.lora_B.default.weight.npy",
+      "sha256": "219c346356fc291eee57d4f6cefc24af2462aae86f53c8cb2e4c1992a84e3219"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.33.self_attn.v_proj.lora_A.default.weight.npy",
+      "sha256": "811b7806ba5742c166153659b4528acd734248ea11ccd7136b257c8a15cd74c0"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/base_model.model.model.layers.33.self_attn.v_proj.lora_B.default.weight.npy",
+      "sha256": "4758a914345c9b33bb774d08783340c1bb000605a9382d3707cb9ff89c5c5c2b"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/gradients/manifest.json",
+      "sha256": "07edc3836ca997215ba32ebb92f49d004d43ae4a7178d72594d0cef1a67d5445"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/initialization_stats.json",
+      "sha256": "d672268afc9922040adf944bbf36a84daecb9ab411f72d31a6c77e8cb1d654e1"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/metadata.json",
+      "sha256": "aabd47de6d31ee020e5a03de55f2cc2e8fc05309e55c14d69134e5728356cc0d"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/raw_loss.jsonl",
+      "sha256": "c33937e68dcb47fc390779180d18d741a3de675946b080ff0bbc3c04296a3821"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/summary.json",
+      "sha256": "32bd575a8870221f29e0e09f7d489be147cb0da074c1b4a6ffb4c4196de927d1"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step/timing.jsonl",
+      "sha256": "f6b76685f6c6d49fab85cb2091d502315943fdfd161fd87d4456ce7f8ad9ec57"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor/COMPLETED",
+      "sha256": "37a40f08d8548dba289b9b0bb35bcf63b359f6d37ee86044ebc6b6da080b9ec1"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor/checkpoints/step_000001/adapter_config.json",
+      "sha256": "b381c2c180a3c75942b3c9bcc7022a306eb7c040a31e84370e953dc753b24f65"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor/checkpoints/step_000001/adapter_model.safetensors",
+      "sha256": "02b97817591821aef00d4c69a989068431e3dd148637d486843d92c5adc8b7d6"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor/config.yaml",
+      "sha256": "15613b1c0eb4c49a9b807a9e424f2896bff8875e8ca481d1fa4ee774936c0739"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor/initialization_stats.json",
+      "sha256": "b5e0cb70b0856b59bad0cabc8394c7ddd7691912449fce64dc5b111f4baa6ff5"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor/metadata.json",
+      "sha256": "02852c70064918c6fdaecac44c48f26f5a921be10c7f4ef17c565c1db1701dd0"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor/raw_loss.jsonl",
+      "sha256": "d6485b06f1416e48d2575e9263c52b200d5e1f75bc7c697798b7ad9708a1ac01"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor/summary.json",
+      "sha256": "3c488beb8325ea8b28b011febd365ae05d5671bd4d839e6ede0310f338897f70"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/openpangu__mbpp__qv__peft_default__s1107__n1__smoke_mbpp_adapter_and_executor/timing.jsonl",
+      "sha256": "a94a71a2ba5dc8a4bbd5605645d2f31d67c3c62f656eba01313acdbf37d32fc2"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization/COMPLETED",
+      "sha256": "37a40f08d8548dba289b9b0bb35bcf63b359f6d37ee86044ebc6b6da080b9ec1"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization/checkpoints/step_000001/adapter_config.json",
+      "sha256": "fa997760bf1acf3abcc0d5c606bb36ad839ccece10dcc9a5743f52de19d55697"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization/checkpoints/step_000001/adapter_model.safetensors",
+      "sha256": "248de195578a9d6d8a5382d6c715d2b1ec4df924aba79db121219429afbb4668"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization/config.yaml",
+      "sha256": "e42745ef80a47b7bd77ae4788f10198d0ea225934d6a350ef1cc24241863de4b"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization/initialization_stats.json",
+      "sha256": "cf5092ba518077492d57b23321fb7e16652bc6ddce5121d55428953295c2905a"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization/metadata.json",
+      "sha256": "b34a6ca3723d4389365fa06f7c0e85f4fd3a47bf2670ca93215e63f9dc3e48df"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization/raw_loss.jsonl",
+      "sha256": "22747e9e62bbff4b0db5b02c14f3264373754c1924707df2c8c24ccb70ecce24"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization/summary.json",
+      "sha256": "899dc7e60335d1533492f92e053ff1b0e3368032e9369de33e7ba1ac95232723"
+    },
+    {
+      "path": "revision_experiments/results/smoke/runs/qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization/timing.jsonl",
+      "sha256": "3e22476d7200d5e12ff61df499f3170a002b125f16b833771ef25efa39fbb756"
+    }
+  ],
+  "formal_results": false
+}

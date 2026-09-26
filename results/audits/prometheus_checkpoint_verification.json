@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "model_dir": "/home/b205/FDA_INIT/pretrained_models/prometheus-7b-v2.0",
+  "revision": "66ffb1fc20beebfb60a3964a957d9011723116c5",
+  "verified": true,
+  "shard_count": 8,
+  "tensor_count": 291,
+  "weight_index_sha256": "098d1f7a096e04a55c90c33a2e92c47fba4c07e41aff99266fad774908fa5023",
+  "shards": [
+    {
+      "file": "model-00001-of-00008.safetensors",
+      "size_bytes": 1979773128,
+      "sha256": "26afbe36c7d04dd26488eff13c5b7975f2e2a658eb6f3517c3f58e3c61b2ba2d",
+      "tensor_count": 37
+    },
+    {
+      "file": "model-00002-of-00008.safetensors",
+      "size_bytes": 1946235640,
+      "sha256": "68754ee9a08370759db5ccfa647915f3c6dca186d587a34b8223a32ba6723d54",
+      "tensor_count": 42
+    },
+    {
+      "file": "model-00003-of-00008.safetensors",
+      "size_bytes": 1973490216,
+      "sha256": "7044141b330ff94fd52f1fb18799156071ea212b045050f9f66b16f010867a58",
+      "tensor_count": 40
+    },
+    {
+      "file": "model-00004-of-00008.safetensors",
+      "size_bytes": 1979781464,
+      "sha256": "b6f73b31c39c598501ebb1c9237c3efcac3798ea2b77c07e81b5f1d5a8a82f56",
+      "tensor_count": 38
+    },
+    {
+      "file": "model-00005-of-00008.safetensors",
+      "size_bytes": 1946243984,
+      "sha256": "1ff853ff8692412e3bc26acccc0c0b3430b8a11c531fcbd3a811f7410be2679c",
+      "tensor_count": 43
+    },
+    {
+      "file": "model-00006-of-00008.safetensors",
+      "size_bytes": 1923166040,
+      "sha256": "c3bedf39d42e46871e188bc50003f28a6100c82109c822b9cdeab3fc3468db45",
+      "tensor_count": 34
+    },
+    {
+      "file": "model-00007-of-00008.safetensors",
+      "size_bytes": 1946243984,
+      "sha256": "96db009cb729bdec84a6df74d4f7413479f4ab98ff8df00a75ebbe9a93ae05de",
+      "tensor_count": 43
+    },
+    {
+      "file": "model-00008-of-00008.safetensors",
+      "size_bytes": 788563544,
+      "sha256": "714069c1ba0aa520a27a89ffc45cf1bc2af0adfaf3b91deaed5b7e95b51fbf06",
+      "tensor_count": 14
+    }
+  ]
+}

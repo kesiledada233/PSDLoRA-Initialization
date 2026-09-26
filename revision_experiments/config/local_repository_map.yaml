@@ -1,0 +1,83 @@
+schema_version: 1
+provenance_status: reconstructed_without_submitted_git_history
+repository_root: /home/b205/FDA_INIT
+framework:
+  name: pytorch_transformers_peft
+  environment: minimind-revision
+  version_command: >-
+    conda run -n minimind-revision python revision_experiments/scripts/capture_environment.py
+entrypoints:
+  submitted_openpangu_train: train_openpangu_fda_lora_final.py
+  submitted_qwen_train: train_qwen2.5_fda_lora_final.py
+  submitted_sharegpt_train: train_sharegpt_final.py
+  submitted_evaluate: evaluate_downstream.py
+  submitted_adapter_initialization: fdt_init.py
+  revision_runner: revision_experiments/scripts/run_matrix.py
+  revision_train: revision_experiments/scripts/train_revision.py
+  revision_evaluate: revision_experiments/scripts/evaluate_checkpoints.py
+  integration_smoke_matrix: revision_experiments/config/smoke/integration_smoke.yaml
+  integration_smoke_audit: revision_experiments/scripts/audit_integration_smokes.py
+models:
+  openpangu_checkpoint:
+    path: pretrained_models/openPangu-Embedded-7B-V1.1
+    hub_id: openpangu/openPangu-Embedded-7B-V1.1
+    revision: 0ae1841cbd53f5218f2ce5dc63083d5382cfc9f5
+    status: ready_sha256_index_and_gpu_load_verified
+  qwen_checkpoint:
+    path: pretrained_models/Qwen2.5-7B
+    hub_id: Qwen/Qwen2.5-7B
+    revision: e25af2efae60472008fbeaf5fb7c4274a87f78d4
+    status: ready_sha256_index_and_gpu_load_verified
+  sharegpt_judge:
+    path: pretrained_models/prometheus-7b-v2.0
+    hub_id: prometheus-eval/prometheus-7b-v2.0
+    revision: 66ffb1fc20beebfb60a3964a957d9011723116c5
+    status: ready_sha256_index_gpu_load_and_scoring_verified
+datasets:
+  gsm8k: pretrained_models/gsm8k
+  cmmlu_raw: pretrained_models/cmmlu
+  cmmlu_processed: revision_experiments/data/processed/cmmlu
+  mbpp_raw: pretrained_models/mbpp/mbpp.jsonl
+  mbpp_processed: revision_experiments/data/processed/mbpp
+  sharegpt_raw: pretrained_models/sharegpt_datasets/computer_en_26k.jsonl
+  sharegpt_split_manifest: revision_experiments/data/processed/sharegpt_split.json
+  sharegpt_judge_prompts: revision_experiments/data/processed/sharegpt_judge_prompts.jsonl
+submitted_artifacts:
+  import_root: legacy_artifacts/submission
+  configs:
+    - legacy_artifacts/submission/FDT_Init/train_openpangu_fda_lora_final.py
+    - legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/results.json
+    - legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/results.json
+    - legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/results.json
+  logs:
+    - legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/training_log.csv
+    - legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/training_log.csv
+    - legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/training_log.csv
+  checkpoints:
+    - legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/final_model
+    - legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/final_model
+    - legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/final_model
+  manifest: legacy_artifacts/submission/SHA256SUMS
+legacy_discovery:
+  report: revision_experiments/results/audits/legacy_artifact_discovery.json
+  derived_outputs_not_valid_for_gate1:
+    - fusion_result.json
+    - time_to_threshold_results.json
+    - time_to_threshold_speedup_by_threshold.csv
+    - time_to_threshold_line_comparison.png
+  ruling: derived summaries cannot replace missing raw per-step logs and corresponding checkpoints
+hardware:
+  submitted: single Huawei Ascend 910B2
+  revision: single NVIDIA GeForce RTX 5090
+  timing_policy: never_mix_absolute_timing_across_platforms
+known_blockers:
+  - valid submitted Git history is unavailable
+  - exact submitted environment export is unavailable
+  - original per-run config.json and exact argv are unavailable; Gate 1-R uses an explicitly reconstructed configuration
+  - Gate 1-R, Gate 2, and the three integration smokes have not been run
+third_party:
+  lora_one:
+    path: third_party/LoRA-One
+    repository: https://github.com/YuanheZ/LoRA-One
+    commit: b797a10dcb818e9553b57fa060baa7b00df4484d
+    status: frozen_clean_clone

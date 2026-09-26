@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-09-03T08:07:42.448721+00:00",
+  "model": "prometheus",
+  "checkpoint": "prometheus-eval/prometheus-7b-v2.0@66ffb1fc20beebfb60a3964a957d9011723116c5",
+  "checkpoint_verification_sha256": "011c2740665410056d26b4c7a6f869164516a86ef8f580bd4d6019b4764122e8",
+  "model_loader_provenance": {
+    "mode": "native_transformers_local_checkpoint"
+  },
+  "precision": "bf16",
+  "device": "cuda:1",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "peak_memory_allocated_bytes": 14497139712,
+  "input_token_count": 15,
+  "logits_shape": [
+    1,
+    15,
+    32000
+  ],
+  "logits_dtype": "torch.bfloat16",
+  "logits_abs_max": 30.0,
+  "passed": true
+}

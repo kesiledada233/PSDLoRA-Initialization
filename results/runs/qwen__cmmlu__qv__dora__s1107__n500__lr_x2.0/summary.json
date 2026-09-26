@@ -1,0 +1,16 @@
+{
+  "raw_auc500": 226.6192834097892,
+  "validation_auc500": 827.5565319541674,
+  "validation_final_loss": 2.0328244033144482,
+  "validation_guardrail_metric": "validation_loss",
+  "validation_guardrail_value": 2.0328244033144482,
+  "validation_examples_evaluated": 67,
+  "steps_logged": 500,
+  "train_examples": 268,
+  "validation_examples": 67,
+  "test_examples": 11582,
+  "effective_method": "dora",
+  "effective_learning_rate": 0.0006,
+  "trainable_parameter_count": 5160960,
+  "initialization_seconds_total": 3.7417546000215225
+}

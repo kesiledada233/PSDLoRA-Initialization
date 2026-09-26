@@ -1,0 +1,259 @@
+schema_version: 1
+matrix_name: baseline_fairness_qwen_table3
+selection_metric: validation_auc500
+selection_direction: minimize
+tie_breakers:
+- validation_final_loss
+- run_id
+selection_uses_official_test: false
+screening_split: frozen holdout removed from each task's original training split
+final_training_split: full original training split
+screening_trial_count: 48
+screening_manifest_hash: ea5dddda3ff0afdc30e9a5294330f3216e805b23a7d6282bce079762b5397cc4
+tasks:
+  gsm8k:
+    dora:
+      effective_method: dora
+      learning_rate: 0.0003
+      central_learning_rate: 0.0003
+      variant: lr_x1.0
+      search_kind: learning_rate_multiplier
+      search_value: 1.0
+      selected_run_id: qwen__gsm8k__qv__dora__s1107__n500__lr_x1.0
+      validation_auc500: 78.28806105226249
+      validation_final_loss: 0.1345092942501651
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.1345092942501651
+      validation_examples_evaluated: 256
+      trainable_parameter_count: 5160960
+      initialization_seconds_total: 0.5219706909847446
+    pissa:
+      effective_method: pissa
+      learning_rate: 4.0e-05
+      central_learning_rate: 2.0e-05
+      variant: lr_x2.0
+      search_kind: learning_rate_multiplier
+      search_value: 2.0
+      selected_run_id: qwen__gsm8k__qv__pissa__s1107__n500__lr_x2.0
+      validation_auc500: 88.25709676530096
+      validation_final_loss: 0.14484969776822254
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.14484969776822254
+      validation_examples_evaluated: 256
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 24.9082319070003
+    lora_one:
+      effective_method: lora_one
+      learning_rate: 0.0001
+      central_learning_rate: 5.0e-05
+      variant: lr_x2.0
+      search_kind: learning_rate_multiplier
+      search_value: 2.0
+      selected_run_id: qwen__gsm8k__qv__lora_one__s1107__n500__lr_x2.0
+      validation_auc500: 79.23995013206877
+      validation_final_loss: 0.13626566594757605
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.13626566594757605
+      validation_examples_evaluated: 256
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 21.65674048301298
+    proposed:
+      effective_method: powerlaw_global_a06
+      learning_rate: 5.0e-05
+      central_learning_rate: 5.0e-05
+      variant: alpha_0.6
+      search_kind: alpha
+      search_value: 0.6
+      selected_run_id: qwen__gsm8k__qv__powerlaw_global_a06__s1107__n500__alpha_0.6
+      validation_auc500: 90.19515569834766
+      validation_final_loss: 0.14184340143401641
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.14184340143401641
+      validation_examples_evaluated: 256
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 0.6471904579666443
+  cmmlu:
+    dora:
+      effective_method: dora
+      learning_rate: 0.00015
+      central_learning_rate: 0.0003
+      variant: lr_x0.5
+      search_kind: learning_rate_multiplier
+      search_value: 0.5
+      selected_run_id: qwen__cmmlu__qv__dora__s1107__n500__lr_x0.5
+      validation_auc500: 749.8901107974017
+      validation_final_loss: 1.8682621406085456
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 1.8682621406085456
+      validation_examples_evaluated: 67
+      trainable_parameter_count: 5160960
+      initialization_seconds_total: 1.78099157003453
+    pissa:
+      effective_method: pissa
+      learning_rate: 2.0e-05
+      central_learning_rate: 2.0e-05
+      variant: lr_x1.0
+      search_kind: learning_rate_multiplier
+      search_value: 1.0
+      selected_run_id: qwen__cmmlu__qv__pissa__s1107__n500__lr_x1.0
+      validation_auc500: 604.3908934595426
+      validation_final_loss: 1.1795025650245041
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 1.1795025650245041
+      validation_examples_evaluated: 67
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 82.98192871501669
+    lora_one:
+      effective_method: lora_one
+      learning_rate: 2.5e-05
+      central_learning_rate: 5.0e-05
+      variant: lr_x0.5
+      search_kind: learning_rate_multiplier
+      search_value: 0.5
+      selected_run_id: qwen__cmmlu__qv__lora_one__s1107__n500__lr_x0.5
+      validation_auc500: 590.3436045426486
+      validation_final_loss: 1.1644480446381356
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 1.1644480446381356
+      validation_examples_evaluated: 67
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 482.20138947397936
+    proposed:
+      effective_method: powerlaw_global_a03
+      learning_rate: 5.0e-05
+      central_learning_rate: 5.0e-05
+      variant: alpha_0.3
+      search_kind: alpha
+      search_value: 0.3
+      selected_run_id: qwen__cmmlu__qv__powerlaw_global_a03__s1107__n500__alpha_0.3
+      validation_auc500: 610.266411927209
+      validation_final_loss: 1.243104771446826
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 1.243104771446826
+      validation_examples_evaluated: 67
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 0.5134119099820964
+  sharegpt:
+    dora:
+      effective_method: dora
+      learning_rate: 0.0003
+      central_learning_rate: 0.0003
+      variant: lr_x1.0
+      search_kind: learning_rate_multiplier
+      search_value: 1.0
+      selected_run_id: qwen__sharegpt__qv__dora__s1107__n500__lr_x1.0
+      validation_auc500: 485.02878286615015
+      validation_final_loss: 0.9603051044940949
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.9603051044940949
+      validation_examples_evaluated: 500
+      trainable_parameter_count: 5160960
+      initialization_seconds_total: 0.46583921799901873
+    pissa:
+      effective_method: pissa
+      learning_rate: 4.0e-05
+      central_learning_rate: 2.0e-05
+      variant: lr_x2.0
+      search_kind: learning_rate_multiplier
+      search_value: 2.0
+      selected_run_id: qwen__sharegpt__qv__pissa__s1107__n500__lr_x2.0
+      validation_auc500: 489.06023582518105
+      validation_final_loss: 0.9684993296861648
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.9684993296861648
+      validation_examples_evaluated: 500
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 24.847162795020267
+    lora_one:
+      effective_method: lora_one
+      learning_rate: 0.0001
+      central_learning_rate: 5.0e-05
+      variant: lr_x2.0
+      search_kind: learning_rate_multiplier
+      search_value: 2.0
+      selected_run_id: qwen__sharegpt__qv__lora_one__s1107__n500__lr_x2.0
+      validation_auc500: 485.53948977068075
+      validation_final_loss: 0.9629364709854126
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.9629364709854126
+      validation_examples_evaluated: 500
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 21.02812572394032
+    proposed:
+      effective_method: powerlaw_global_a10
+      learning_rate: 5.0e-05
+      central_learning_rate: 5.0e-05
+      variant: alpha_1.0
+      search_kind: alpha
+      search_value: 1.0
+      selected_run_id: qwen__sharegpt__qv__powerlaw_global_a10__s1107__n500__alpha_1.0
+      validation_auc500: 488.8002923443914
+      validation_final_loss: 0.9663524993062019
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.9663524993062019
+      validation_examples_evaluated: 500
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 0.5569885000004433
+  mbpp:
+    dora:
+      effective_method: dora
+      learning_rate: 0.00015
+      central_learning_rate: 0.0003
+      variant: lr_x0.5
+      search_kind: learning_rate_multiplier
+      search_value: 0.5
+      selected_run_id: qwen__mbpp__qv__dora__s1107__n500__lr_x0.5
+      validation_auc500: 440.76428871415555
+      validation_final_loss: 0.8781427021324635
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.8781427021324635
+      validation_examples_evaluated: 100
+      trainable_parameter_count: 5160960
+      initialization_seconds_total: 0.46854229999007657
+    pissa:
+      effective_method: pissa
+      learning_rate: 4.0e-05
+      central_learning_rate: 2.0e-05
+      variant: lr_x2.0
+      search_kind: learning_rate_multiplier
+      search_value: 2.0
+      selected_run_id: qwen__mbpp__qv__pissa__s1107__n500__lr_x2.0
+      validation_auc500: 469.50539467297494
+      validation_final_loss: 0.8580230425298214
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.8580230425298214
+      validation_examples_evaluated: 100
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 24.828118389996234
+    lora_one:
+      effective_method: lora_one
+      learning_rate: 5.0e-05
+      central_learning_rate: 5.0e-05
+      variant: lr_x1.0
+      search_kind: learning_rate_multiplier
+      search_value: 1.0
+      selected_run_id: qwen__mbpp__qv__lora_one__s1107__n500__lr_x1.0
+      validation_auc500: 421.1580734606832
+      validation_final_loss: 0.7625796042382718
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.7625796042382718
+      validation_examples_evaluated: 100
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 21.688063909008633
+    proposed:
+      effective_method: powerlaw_global_a06
+      learning_rate: 5.0e-05
+      central_learning_rate: 5.0e-05
+      variant: alpha_0.6
+      search_kind: alpha
+      search_value: 0.6
+      selected_run_id: qwen__mbpp__qv__powerlaw_global_a06__s1107__n500__alpha_0.6
+      validation_auc500: 441.9005146380514
+      validation_final_loss: 0.7541909776628017
+      validation_guardrail_metric: validation_loss
+      validation_guardrail_value: 0.7541909776628017
+      validation_examples_evaluated: 100
+      trainable_parameter_count: 5046272
+      initialization_seconds_total: 0.4562319000251591
+all_trials_file: baseline_search_all_trials.csv
+all_trials_sha256: 4166a430fd58f5879d262d75087b77e234cfa854df7f13a1ccf796fdd1f42b24

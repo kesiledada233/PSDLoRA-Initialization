@@ -1,0 +1,33 @@
+{
+  "run_id": "openpangu__gsm8k__qv__peft_default__s42__n2500",
+  "checkpoint": 2500,
+  "task": "gsm8k",
+  "metrics": {
+    "exact_match": 0.6444275966641395
+  },
+  "sample_count": 1319,
+  "prediction_artifact": "revision_experiments/results/evaluations/openpangu__gsm8k__qv__peft_default__s42__n2500__step_002500__gsm8k.jsonl",
+  "prediction_sha256": "082d8b68b8a06ca6acae936bf0ae2b9a93d827649388b78c6c76b7e9c4461e3a",
+  "evaluation_seconds": 16187.657549186999,
+  "sample_set_hash": "47ddc577ceba4e4a971899fb851b5e55fae68187873121a4ec6edfb8771c4d29",
+  "evaluation_config": {
+    "schema_version": 1,
+    "run_id": "openpangu__gsm8k__qv__peft_default__s42__n2500",
+    "checkpoint": 2500,
+    "task": "gsm8k",
+    "protocol": {
+      "metric": "exact_match",
+      "prompt": "fixed_8shot_cot",
+      "decoding": "greedy",
+      "sample_count": 1319,
+      "sample_selection": "full_frozen_official_test_order"
+    },
+    "dataset_split_hash": "00fb108842db88dc8b6e9e7d5c63da7fea8688673448a0ca2b5206214e0f738b",
+    "sample_manifest": {
+      "sample_count": 1319,
+      "ordered_sample_ids_sha256": "69d6744016699073a7ad0e561dab501fffe5a1197aa7dbe66907c4f14bfd22df",
+      "ordered_sample_content_sha256": "7d7e49d1579b2b660b2dc3d0a7557261e875e79980da2fd0d45c0625c7566811"
+    }
+  },
+  "evaluation_config_hash": "df0005c6372d0a4a5078cb8da98dbd5016f296233377b6ead6d0af28fb681bc1"
+}

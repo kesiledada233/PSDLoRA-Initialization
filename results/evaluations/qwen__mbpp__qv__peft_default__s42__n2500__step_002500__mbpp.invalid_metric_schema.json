@@ -1,0 +1,38 @@
+{
+  "run_id": "qwen__mbpp__qv__peft_default__s42__n2500",
+  "checkpoint": 2500,
+  "task": "mbpp",
+  "metrics": {
+    "pass_at_1": 0.3983957219251337,
+    "pass_at_1_strict": 0.08021390374331551
+  },
+  "sample_count": 374,
+  "prediction_artifact": "revision_experiments/results/evaluations/qwen__mbpp__qv__peft_default__s42__n2500__step_002500__mbpp.jsonl",
+  "prediction_sha256": "2c3b9f6aff9ec4105f8c576056ac62effaa81cc50c14ef6fdd7f62e63556603a",
+  "evaluation_seconds": 603.5123401950113,
+  "sample_set_hash": "2b98b107b05cac5e8cabe04e664e780fe54033f61d3661c69ac7528745f3e308",
+  "evaluation_config": {
+    "schema_version": 1,
+    "run_id": "qwen__mbpp__qv__peft_default__s42__n2500",
+    "checkpoint": 2500,
+    "task": "mbpp",
+    "protocol": {
+      "metric": "pass_at_1",
+      "prompt": "fixed_3shot",
+      "decoding": "greedy",
+      "sample_count": 374,
+      "sample_selection": "full_frozen_official_test_order"
+    },
+    "dataset_split_hash": "5019c2dd63891c97ca38a5af5e78710f255a31d5798182eea9191a3a87ea8f5d",
+    "sample_manifest": {
+      "sample_count": 374,
+      "ordered_sample_ids_sha256": "45ac1fc7dc2e696b84524fbf55145927c80308bfe24f85d82b14f6e0d4c64c32",
+      "ordered_sample_content_sha256": "b889c5ee07691d5df69f09661d758b021bba3d549b8a7b7958afd735356e1cf4"
+    }
+  },
+  "evaluation_config_hash": "bca79e531216a563b3e99721b245edff603191dd090074384efbdac0fdc9031a",
+  "sanitized_byte_fields": [
+    "$[102].execution.stdout",
+    "$[71].execution.stdout"
+  ]
+}

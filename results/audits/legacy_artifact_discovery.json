@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-09-04T16:18:51.875251+00:00",
+  "provenance_status": "reconstructed_without_submitted_git_history",
+  "submitted_source_entrypoints": [
+    {
+      "path": "train_openpangu_fda_lora_final.py",
+      "role": "submitted_source_entrypoint",
+      "size_bytes": 36235,
+      "sha256": "2c618d9a3f63a4e2973639985595e9f9e785a5875bd9ee6f5a95d01632d4f982"
+    },
+    {
+      "path": "train_qwen2.5_fda_lora_final.py",
+      "role": "submitted_source_entrypoint",
+      "size_bytes": 35327,
+      "sha256": "642985a850bde520ab05928a88b4333c9b1668e81288cb4ee141b9b2307691f0"
+    },
+    {
+      "path": "train_sharegpt_final.py",
+      "role": "submitted_source_entrypoint",
+      "size_bytes": 35648,
+      "sha256": "9844ea88ca2ed76a53515420aee7fe3698ded3ff80b96b5e71c13ff4eca9d201"
+    },
+    {
+      "path": "evaluate_downstream.py",
+      "role": "submitted_source_entrypoint",
+      "size_bytes": 34643,
+      "sha256": "083806a037a390aea57e36706d4072802adb06bf39fd8a11bdee5bdfb0a2f7f0"
+    },
+    {
+      "path": "fdt_init.py",
+      "role": "submitted_source_entrypoint",
+      "size_bytes": 12912,
+      "sha256": "790d12d9ee82b9b1feb751de500ebab931089eeb6ea5bb7c1bf454dcb2524f43"
+    }
+  ],
+  "derived_candidates": [
+    {
+      "path": "fusion_result.json",
+      "role": "empty_or_derived_fusion_summary",
+      "size_bytes": 4,
+      "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    },
+    {
+      "path": "time_to_threshold_results.json",
+      "role": "derived_threshold_summary",
+      "size_bytes": 4270,
+      "sha256": "c2b89002ae234c6522bc3fc1b47f441bcbf0c3fa070b7e3acefb62bc633febf6"
+    },
+    {
+      "path": "time_to_threshold_speedup_by_threshold.csv",
+      "role": "derived_threshold_table",
+      "size_bytes": 1389,
+      "sha256": "df458bda6a744d01fd56f20ab0ffe2291bb2902619f0b30e936b89aea3ce2c61"
+    },
+    {
+      "path": "time_to_threshold_line_comparison.png",
+      "role": "derived_threshold_figure",
+      "size_bytes": 319256,
+      "sha256": "b71063b99965363a762e95547cad25149f64a907a7bd61726defa865d027e3d0"
+    },
+    {
+      "path": "fda_enhanced_overview.png",
+      "role": "derived_overview_figure",
+      "size_bytes": 276067,
+      "sha256": "7f8cbadb0c804e6fde116e5b784f59d2cc0371796b0f0675a00107cf374cbbdf"
+    },
+    {
+      "path": "method_overview_assets.pdf",
+      "role": "method_figure_asset",
+      "size_bytes": 60217,
+      "sha256": "33734384babab828a53c026937210e4a9876a1e2d280c2fafd0ed338bb05e861"
+    },
+    {
+      "path": "method_overview_assets.png",
+      "role": "method_figure_asset",
+      "size_bytes": 220873,
+      "sha256": "3d8650f834bd6e31d539741773b328bd6736b2b4371f3ebb5f2f8f4ee1bb29ab"
+    }
+  ],
+  "discovered_output_directories": [
+    "legacy_artifacts/submission/FDT_Init/outputs_gsm8k"
+  ],
+  "raw_run_artifacts": {
+    "configs": [],
+    "raw_logs": [
+      {
+        "path": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/training_log.csv",
+        "role": "raw_training_log",
+        "size_bytes": 190442,
+        "sha256": "59903dcdb07a1a64123abc67c614aa8224a49541e38177c1029288ecb50bc605"
+      },
+      {
+        "path": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/training_log.csv",
+        "role": "raw_training_log",
+        "size_bytes": 189630,
+        "sha256": "4e0792e68c3f230dd574c473afe91c43da777d370f4fa47a2608d1708832e419"
+      },
+      {
+        "path": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/training_log.csv",
+        "role": "raw_training_log",
+        "size_bytes": 190266,
+        "sha256": "caa8b915efce65ac80207549a421d0d709c11103ef839a65e7bdebf91ebd3156"
+      }
+    ],
+    "checkpoints": [
+      {
+        "path": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline/final_model/adapter_model.safetensors",
+        "role": "adapter_or_training_checkpoint",
+        "size_bytes": 28985168,
+        "sha256": "c5ae99ff25ab679329cb7dc8c87783cefbd9f0723c415ace4ef639429feeaa39"
+      },
+      {
+        "path": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed123/final_model/adapter_model.safetensors",
+        "role": "adapter_or_training_checkpoint",
+        "size_bytes": 28985168,
+        "sha256": "7bb44bb0970fbb76dbd55617d8f3c255498ab7d8b0d9ab7afb89952f22e368ef"
+      },
+      {
+        "path": "legacy_artifacts/submission/FDT_Init/outputs_gsm8k/baseline_seed42/final_model/adapter_model.safetensors",
+        "role": "adapter_or_training_checkpoint",
+        "size_bytes": 28985168,
+        "sha256": "17e9b15050d565977eef3b5841aa856dbe513d08285b18348e2ac6499db8d35f"
+      }
+    ]
+  },
+  "coherent_gate1_candidates": [],
+  "gate1_required_categories_found": {
+    "exact_runtime_config": false,
+    "raw_per_step_loss_log": true,
+    "corresponding_adapter_checkpoint": true
+  },
+  "sufficient_for_gate1_reproduction": false,
+  "reasons": [
+    "no exact runtime config was found in a submitted-run output directory"
+  ],
+  "ruling": "Candidate files may be preserved as historical derived outputs but cannot be used as raw Gate 1-R evidence without the source config, per-step log, and corresponding checkpoint."
+}

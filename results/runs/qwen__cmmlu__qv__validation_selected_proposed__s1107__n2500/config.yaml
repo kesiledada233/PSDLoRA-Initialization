@@ -1,0 +1,47 @@
+effective_learning_rate: 5.0e-05
+effective_method: powerlaw_global_a03
+matrix: baseline_fairness_qwen_table3
+max_steps: 2500
+method: validation_selected_proposed
+model: qwen
+run_id: qwen__cmmlu__qv__validation_selected_proposed__s1107__n2500
+section: final
+seed: 1107
+selection_method: proposed
+target: qv
+target_modules: &id001
+- q_proj
+- v_proj
+task: cmmlu
+training:
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 5.0e-05
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_rank: 16
+  max_length: 512
+  precision: bf16
+  scheduler: cosine
+  target_modules: *id001
+  validation_batch_size: 1
+  validation_interval: 25
+  validation_max_step: 500
+  warmup_steps: 100
+  weight_decay: 0.01
+validation_selection:
+  central_learning_rate: 5.0e-05
+  effective_method: powerlaw_global_a03
+  initialization_seconds_total: 0.5134119099820964
+  learning_rate: 5.0e-05
+  search_kind: alpha
+  search_method: proposed
+  search_value: 0.3
+  selected_run_id: qwen__cmmlu__qv__powerlaw_global_a03__s1107__n500__alpha_0.3
+  trainable_parameter_count: 5046272
+  validation_auc500: 610.266411927209
+  validation_examples_evaluated: 67
+  validation_final_loss: 1.243104771446826
+  validation_guardrail_metric: validation_loss
+  validation_guardrail_value: 1.243104771446826
+  variant: alpha_0.3

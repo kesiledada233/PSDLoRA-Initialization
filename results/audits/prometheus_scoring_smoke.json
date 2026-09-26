@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-09-03T08:15:23.269026+00:00",
+  "judge_revision": "66ffb1fc20beebfb60a3964a957d9011723116c5",
+  "checkpoint_verification_sha256": "011c2740665410056d26b4c7a6f869164516a86ef8f580bd4d6019b4764122e8",
+  "protocol": {
+    "metrics": [
+      "heldout_nll",
+      "prometheus_absolute_score"
+    ],
+    "judge": "prometheus-7b-v2.0",
+    "judge_revision": "66ffb1fc20beebfb60a3964a957d9011723116c5",
+    "comparison_reference": "frozen_first_assistant_response",
+    "judge_prompt": "prometheus2_official_absolute_mistral_v1",
+    "score_range": [
+      1,
+      5
+    ],
+    "prompt_count": 200,
+    "sample_count": 200,
+    "sample_selection": "frozen_sharegpt_judge_prompt_manifest_order"
+  },
+  "device": "cuda:1",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "cases": [
+    {
+      "case": "correct",
+      "instruction": "What is 2 + 2?",
+      "response": "The answer is 4.",
+      "reference": "The answer is 4.",
+      "judge_raw": "The response is correct and directly answers the question posed. It is relevant to the instruction and provides a clear and concise answer. The response is also helpful as it gives the correct answer to the simple arithmetic problem. However, it lacks the additional context or elaboration that could have made it more informative or engaging. For example, it could have explained why the answer is 4, or provided a more detailed explanation of the arithmetic process. Despite this, the response is still safe and useful, and it meets the criteria of correctness and relevance. Therefore, based on the score rubric, the response is correct and helpful with only minor limitations. So the overall score is 4. [RESULT] 4",
+      "score": 4
+    },
+    {
+      "case": "incorrect",
+      "instruction": "What is 2 + 2?",
+      "response": "The answer is 5.",
+      "reference": "The answer is 4.",
+      "judge_raw": "The response provided is incorrect, as the sum of 2 + 2 is 4, not 5. This error is significant and makes the response irrelevant to the question asked. The response does not meet the criteria of correctness, as it does not provide the correct answer. It also lacks clarity and helpfulness, as it does not assist the user in understanding the correct answer. Furthermore, the response is not safe, as it could lead to confusion or misinformation. Therefore, based on the score rubric, the response is not useful and does not meet the standards of correctness, relevance, clarity, helpfulness, and safety. So the overall score is 1. [RESULT] 1",
+      "score": 1
+    },
+    {
+      "case": "helpful",
+      "instruction": "Name one way to save water at home.",
+      "response": "Fix leaking taps promptly.",
+      "reference": "Fix leaking taps promptly.",
+      "judge_raw": "The response provided is correct and relevant to the task of saving water at home. It directly addresses the issue of leaking taps, which is a significant source of water wastage. The response is clear and concise, making it easy to understand and implement. It is also helpful, as it offers a practical solution to a common problem. Furthermore, it is safe, as it does not involve any risky or hazardous actions. The response aligns well with the score rubric's criteria for correctness, relevance, clarity, helpfulness, and safety. Therefore, the response is fully correct, relevant, clear, helpful, and safe. \n[RESULT] 5",
+      "score": 5
+    }
+  ],
+  "parseable_count": 3,
+  "correct_above_incorrect": true,
+  "passed": true
+}

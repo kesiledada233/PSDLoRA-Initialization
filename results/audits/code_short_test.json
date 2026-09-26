@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-09-04T17:33:49.048641+00:00",
+  "python": "3.10.20",
+  "executable": "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+  "conda_environment": null,
+  "git_commit": "0e54dc78b27e525e00d810cd07919f95a5631ff5",
+  "worktree_clean_at_start": true,
+  "passed": true,
+  "unit_test_count": 143,
+  "entrypoint_count": 33,
+  "matrix_counts": {
+    "core_500step_matrix.yaml": 48,
+    "mechanism_matrix.yaml": 48,
+    "downstream_matrix.yaml": 63,
+    "scope_matrix.yaml": 27,
+    "baseline_search_matrix.yaml": 108
+  },
+  "formal_training_ready": false,
+  "formal_gate_errors": [
+    "missing or invalid integration smoke report: /home/b205/FDA_INIT/revision_experiments/results/audits/integration_smoke.json: [Errno 2] No such file or directory: '/home/b205/FDA_INIT/revision_experiments/results/audits/integration_smoke.json'"
+  ],
+  "scope": "CPU/static/synthetic tests; does not execute 7B training or formal evaluation",
+  "checks": [
+    {
+      "name": "compileall",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 0.03982400000677444,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "revision_experiments"
+      ],
+      "output_tail": ""
+    },
+    {
+      "name": "download_script_bash_syntax",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 0.0019265000009909272,
+      "command": [
+        "bash",
+        "-n",
+        "revision_experiments/scripts/download_models.sh"
+      ],
+      "output_tail": ""
+    },
+    {
+      "name": "full_unit_suite",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 16.406988455011742,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "revision_experiments/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "output_tail": "_result_binds_raw_candidate_judge_and_ordered_samples (test_sharegpt_evaluation_contract.ShareGptEvaluationContractTests) ... ok\ntest_judge_row_builder_emits_validator_schema_for_frozen_reference (test_sharegpt_evaluation_contract.ShareGptEvaluationContractTests) ... ok\ntest_prompt_contains_candidate_reference_and_rubric (test_sharegpt_judge.ShareGptJudgeTests) ... ok\ntest_score_parser (test_sharegpt_judge.ShareGptJudgeTests) ... ok\ntest_missing_user_returns_none (test_sharegpt_prompts.ShareGptPromptTests) ... ok\ntest_supported_turn_shapes (test_sharegpt_prompts.ShareGptPromptTests) ... ok\ntest_collects_both_required_cases_with_csv_binding (test_step_zero_artifacts.StepZeroArtifactTests) ... ok\ntest_preserves_loss_decimal_strings_when_combining (test_step_zero_artifacts.StepZeroArtifactTests) ... ok\ntest_rejects_tampered_case_csv (test_step_zero_artifacts.StepZeroArtifactTests) ... ok\ntest_all_revision_initializers_preserve_base_function_at_b_zero (test_step_zero_equivalence.StepZeroTests) ... ok\ntest_equivalence_aggregates_every_batch (test_step_zero_equivalence.StepZeroTests) ... ok\ntest_legacy_label_copy_scores_padding (test_step_zero_equivalence.StepZeroTests) ... ok\ntest_target_diagnostics_cover_each_batch_and_padding (test_step_zero_equivalence.StepZeroTests) ... ok\ntest_exact_row_space_has_full_capture_and_zero_angles (test_subspace_diagnostics.SubspaceDiagnosticTests) ... ok\ntest_orthogonal_gradient_has_zero_capture (test_subspace_diagnostics.SubspaceDiagnosticTests) ... ok\ntest_cmmlu_selects_one_per_subject (test_validation_split.ValidationSplitTests) ... ok\ntest_partition_rejects_out_of_range_indices (test_validation_split.ValidationSplitTests) ... ok\ntest_partition_removes_holdout_from_screening_training (test_validation_split.ValidationSplitTests) ... ok\ntest_random_selection_is_deterministic_and_unique (test_validation_split.ValidationSplitTests) ... ok\n\n----------------------------------------------------------------------\nRan 143 tests in 12.978s\n\nOK\n"
+    },
+    {
+      "name": "all_cli_help",
+      "passed": true,
+      "entrypoint_count": 33,
+      "failures": [],
+      "duration_seconds": 71.92863284700434
+    },
+    {
+      "name": "matrix_list_core_500step_matrix.yaml",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 2.967712790996302,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/run_matrix.py",
+        "--matrix",
+        "/home/b205/FDA_INIT/revision_experiments/config/core_500step_matrix.yaml",
+        "--list"
+      ],
+      "output_tail": ": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"openpangu__mbpp__qv__powerlaw_shuffle_a06__s1107__n500\"\n    },\n    {\n      \"model\": \"openpangu\",\n      \"task\": \"mbpp\",\n      \"method\": \"powerlaw_shuffle_a06\",\n      \"seed\": 123,\n      \"max_steps\": 500,\n      \"target\": \"qv\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"openpangu__mbpp__qv__powerlaw_shuffle_a06__s123__n500\"\n    },\n    {\n      \"model\": \"openpangu\",\n      \"task\": \"mbpp\",\n      \"method\": \"powerlaw_shuffle_a06\",\n      \"seed\": 42,\n      \"max_steps\": 500,\n      \"target\": \"qv\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"openpangu__mbpp__qv__powerlaw_shuffle_a06__s42__n500\"\n    }\n  ]\n}\n"
+    },
+    {
+      "name": "matrix_list_mechanism_matrix.yaml",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 2.9335308900044765,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/run_matrix.py",
+        "--matrix",
+        "/home/b205/FDA_INIT/revision_experiments/config/mechanism_matrix.yaml",
+        "--list"
+      ],
+      "output_tail": " \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"qwen__cmmlu__qv__powerlaw_col_a06__s1107__n500__gradlog\"\n    },\n    {\n      \"model\": \"qwen\",\n      \"task\": \"cmmlu\",\n      \"method\": \"powerlaw_col_a06\",\n      \"seed\": 123,\n      \"max_steps\": 500,\n      \"target\": \"qv\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"qwen__cmmlu__qv__powerlaw_col_a06__s123__n500__gradlog\"\n    },\n    {\n      \"model\": \"qwen\",\n      \"task\": \"cmmlu\",\n      \"method\": \"powerlaw_col_a06\",\n      \"seed\": 42,\n      \"max_steps\": 500,\n      \"target\": \"qv\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"qwen__cmmlu__qv__powerlaw_col_a06__s42__n500__gradlog\"\n    }\n  ]\n}\n"
+    },
+    {
+      "name": "matrix_list_downstream_matrix.yaml",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 2.978451386996312,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/run_matrix.py",
+        "--matrix",
+        "/home/b205/FDA_INIT/revision_experiments/config/downstream_matrix.yaml",
+        "--list"
+      ],
+      "output_tail": "aining\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"qwen__cmmlu__qv__iid_matched__s1107__n2500\"\n    },\n    {\n      \"model\": \"qwen\",\n      \"task\": \"cmmlu\",\n      \"method\": \"iid_matched\",\n      \"seed\": 123,\n      \"max_steps\": 2500,\n      \"target\": \"qv\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"qwen__cmmlu__qv__iid_matched__s123__n2500\"\n    },\n    {\n      \"model\": \"qwen\",\n      \"task\": \"cmmlu\",\n      \"method\": \"iid_matched\",\n      \"seed\": 42,\n      \"max_steps\": 2500,\n      \"target\": \"qv\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"qwen__cmmlu__qv__iid_matched__s42__n2500\"\n    }\n  ]\n}\n"
+    },
+    {
+      "name": "matrix_list_scope_matrix.yaml",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 2.951128268992761,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/run_matrix.py",
+        "--matrix",
+        "/home/b205/FDA_INIT/revision_experiments/config/scope_matrix.yaml",
+        "--list"
+      ],
+      "output_tail": "      \"seed\": 1107,\n      \"max_steps\": 10000,\n      \"target\": \"qv\",\n      \"section\": \"long_run\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n10000\"\n    },\n    {\n      \"model\": \"openpangu\",\n      \"task\": \"cmmlu\",\n      \"method\": \"powerlaw_global_a06\",\n      \"seed\": 123,\n      \"max_steps\": 10000,\n      \"target\": \"qv\",\n      \"section\": \"long_run\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"openpangu__cmmlu__qv__powerlaw_global_a06__s123__n10000\"\n    },\n    {\n      \"model\": \"openpangu\",\n      \"task\": \"cmmlu\",\n      \"method\": \"powerlaw_global_a06\",\n      \"seed\": 42,\n      \"max_steps\": 10000,\n      \"target\": \"qv\",\n      \"section\": \"long_run\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"run_id\": \"openpangu__cmmlu__qv__powerlaw_global_a06__s42__n10000\"\n    }\n  ]\n}\n"
+    },
+    {
+      "name": "matrix_list_baseline_search_matrix.yaml",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 2.9426075690134894,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/run_matrix.py",
+        "--matrix",
+        "/home/b205/FDA_INIT/revision_experiments/config/baseline_search_matrix.yaml",
+        "--list"
+      ],
+      "output_tail": "proj\",\n        \"v_proj\"\n      ],\n      \"selection_method\": \"proposed\",\n      \"run_id\": \"qwen__mbpp__qv__validation_selected_proposed__s1107__n2500\"\n    },\n    {\n      \"model\": \"qwen\",\n      \"task\": \"mbpp\",\n      \"method\": \"validation_selected_proposed\",\n      \"seed\": 123,\n      \"max_steps\": 2500,\n      \"target\": \"qv\",\n      \"section\": \"final\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ],\n        \"validation_interval\": 25,\n        \"validation_max_step\": 500,\n        \"validation_batch_size\": 1\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"selection_method\": \"proposed\",\n      \"run_id\": \"qwen__mbpp__qv__validation_selected_proposed__s123__n2500\"\n    },\n    {\n      \"model\": \"qwen\",\n      \"task\": \"mbpp\",\n      \"method\": \"validation_selected_proposed\",\n      \"seed\": 42,\n      \"max_steps\": 2500,\n      \"target\": \"qv\",\n      \"section\": \"final\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 100,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ],\n        \"validation_interval\": 25,\n        \"validation_max_step\": 500,\n        \"validation_batch_size\": 1\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"selection_method\": \"proposed\",\n      \"run_id\": \"qwen__mbpp__qv__validation_selected_proposed__s42__n2500\"\n    }\n  ]\n}\n"
+    },
+    {
+      "name": "matrix_list_integration_smoke",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 2.9514841710042674,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/run_matrix.py",
+        "--matrix",
+        "/home/b205/FDA_INIT/revision_experiments/config/smoke/integration_smoke.yaml",
+        "--list",
+        "--smoke"
+      ],
+      "output_tail": "     \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 1,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 16,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ],\n        \"use_rslora\": true\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"checkpoints\": [\n        1\n      ],\n      \"logging\": {},\n      \"gradient_batches\": 8,\n      \"gradient_batch_size\": 1,\n      \"gradient_max_length\": 1024,\n      \"stable_gamma\": 128,\n      \"run_id\": \"qwen__cmmlu__qv__lora_one__s1107__n1__smoke_lora_one_initialization\"\n    },\n    {\n      \"model\": \"openpangu\",\n      \"task\": \"cmmlu\",\n      \"method\": \"powerlaw_global_a06\",\n      \"seed\": 1107,\n      \"max_steps\": 20,\n      \"target\": \"qv\",\n      \"case\": \"gradient_logger_20step\",\n      \"variant\": \"smoke_gradient_logger_20step\",\n      \"training\": {\n        \"precision\": \"bf16\",\n        \"batch_size\": 1,\n        \"gradient_accumulation_steps\": 8,\n        \"max_length\": 512,\n        \"learning_rate\": 5e-05,\n        \"weight_decay\": 0.01,\n        \"warmup_steps\": 1,\n        \"scheduler\": \"cosine\",\n        \"lora_rank\": 16,\n        \"lora_alpha\": 32,\n        \"lora_dropout\": 0.05,\n        \"target_modules\": [\n          \"q_proj\",\n          \"v_proj\"\n        ]\n      },\n      \"target_modules\": [\n        \"q_proj\",\n        \"v_proj\"\n      ],\n      \"checkpoints\": [\n        20\n      ],\n      \"logging\": {\n        \"gradient_coordinates\": true,\n        \"coordinate_seed\": 20260903,\n        \"coordinates_per_matrix\": 64,\n        \"layers\": [\n          \"first\",\n          \"middle\",\n          \"last\"\n        ],\n        \"full_matrix_steps\": [\n          0,\n          10,\n          20\n        ]\n      },\n      \"run_id\": \"openpangu__cmmlu__qv__powerlaw_global_a06__s1107__n20__smoke_gradient_logger_20step\"\n    }\n  ]\n}\n"
+    },
+    {
+      "name": "synthetic_initialization_audit",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 3.940211665001698,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/audit_initialization.py",
+        "--shape",
+        "4",
+        "64",
+        "--seeds",
+        "7",
+        "--output",
+        "/tmp/revision_code_short_test_1666w4xs/initialization.parquet"
+      ],
+      "output_tail": "              method  seed  rows  columns          mean      std  variance  frobenius_norm  spectral_norm  max_abs  skewness  kurtosis  psd_slope  psd_alpha  psd_r_squared\n         iid_matched     7     4       64 -1.396984e-09 0.171499  0.029412        2.743977       1.630037 0.573083 -0.117566 -0.012615   0.529804  -0.529804       0.042700\n        fft_white_a0     7     4       64 -2.328306e-10 0.171499  0.029412        2.743977       1.543783 0.468310 -0.041189 -0.315459  -0.507816   0.507816       0.013903\n powerlaw_global_a03     7     4       64 -4.656613e-10 0.171499  0.029412        2.743977       1.558551 0.440136 -0.034326 -0.311142  -0.818496   0.818496       0.035455\n powerlaw_global_a06     7     4       64  0.000000e+00 0.171499  0.029412        2.743977       1.600610 0.434903  0.025359 -0.269194  -1.127931   1.127931       0.065819\n powerlaw_global_a10     7     4       64  0.000000e+00 0.171499  0.029412        2.743977       1.724063 0.446975  0.204306 -0.201147  -1.538417   1.538417       0.118222\npowerlaw_shuffle_a06     7     4       64  1.862645e-09 0.171499  0.029412        2.743978       1.608562 0.434903  0.025359 -0.269193   0.018627  -0.018627       0.000060\n    powerlaw_row_a06     7     4       64  1.222361e-09 0.171499  0.029412        2.743977       1.506553 0.490601  0.005166 -0.015931  -1.140956   1.140956       0.174629\n    powerlaw_col_a06     7     4       64  1.164153e-09 0.171499  0.029412        2.743977       1.905471 0.317562 -0.141315 -1.190458   0.244371  -0.244371       0.029103\ndiagnostic figures: /tmp/revision_code_short_test_1666w4xs/initialization_diagnostic.svg, /tmp/revision_code_short_test_1666w4xs/initialization_diagnostic.png\n"
+    },
+    {
+      "name": "completeness_dry_audit",
+      "passed": true,
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "duration_seconds": 4.568286961002741,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/check_completeness.py",
+        "--output",
+        "/tmp/revision_code_short_test_1666w4xs/completeness.json"
+      ],
+      "output_tail": "{\n  \"ok\": true,\n  \"matrices\": {\n    \"baseline_fairness_qwen_table3\": {\n      \"expected\": 108,\n      \"complete\": 0,\n      \"failed\": 0,\n      \"missing\": 108,\n      \"invalid\": 0,\n      \"enabled\": false\n    },\n    \"core_500step\": {\n      \"expected\": 48,\n      \"complete\": 0,\n      \"failed\": 0,\n      \"missing\": 48,\n      \"invalid\": 0,\n      \"enabled\": false\n    },\n    \"downstream_2500step\": {\n      \"expected\": 63,\n      \"complete\": 0,\n      \"failed\": 0,\n      \"missing\": 63,\n      \"invalid\": 0,\n      \"enabled\": false\n    },\n    \"mechanism_500step\": {\n      \"expected\": 48,\n      \"complete\": 0,\n      \"failed\": 0,\n      \"missing\": 48,\n      \"invalid\": 0,\n      \"enabled\": false\n    },\n    \"scope\": {\n      \"expected\": 27,\n      \"complete\": 0,\n      \"failed\": 0,\n      \"missing\": 27,\n      \"invalid\": 0,\n      \"enabled\": false\n    }\n  },\n  \"errors\": []\n}\n"
+    },
+    {
+      "name": "formal_training_fail_closed",
+      "passed": true,
+      "exit_code": 1,
+      "expected_exit_codes": [
+        1
+      ],
+      "duration_seconds": 2.9860241780115757,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/train_revision.py",
+        "--matrix",
+        "/home/b205/FDA_INIT/revision_experiments/config/core_500step_matrix.yaml",
+        "--run-id",
+        "openpangu__gsm8k__qv__peft_default__s1107__n500",
+        "--device",
+        "cuda:0"
+      ],
+      "output_tail": "Training matrix is disabled\n"
+    },
+    {
+      "name": "formal_evaluation_fail_closed",
+      "passed": true,
+      "exit_code": 1,
+      "expected_exit_codes": [
+        1
+      ],
+      "duration_seconds": 2.4689138809917495,
+      "command": [
+        "/home/b205/miniforge3/envs/minimind-revision/bin/python",
+        "revision_experiments/scripts/evaluate_checkpoints.py",
+        "--run-dir",
+        "/home/b205/FDA_INIT/revision_experiments/results/runs/nonexistent-short-test",
+        "--checkpoint",
+        "500",
+        "--task",
+        "cmmlu",
+        "--device",
+        "cuda:0"
+      ],
+      "output_tail": "Invalid completed run directory: missing file: metadata.json; missing file: config.yaml; missing file: raw_loss.jsonl; missing file: timing.jsonl; missing file: initialization_stats.json; run has neither COMPLETED nor FAILED.json terminal marker\n"
+    },
+    {
+      "name": "existing_model_evidence",
+      "passed": true,
+      "model_summary": {
+        "openpangu": {
+          "revision": "0ae1841cbd53f5218f2ce5dc63083d5382cfc9f5",
+          "verified": true
+        },
+        "qwen": {
+          "revision": "e25af2efae60472008fbeaf5fb7c4274a87f78d4",
+          "verified": true
+        }
+      },
+      "prometheus_ready": true,
+      "errors": []
+    }
+  ],
+  "failures": []
+}

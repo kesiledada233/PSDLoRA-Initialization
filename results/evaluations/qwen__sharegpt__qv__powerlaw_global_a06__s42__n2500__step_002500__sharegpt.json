@@ -1,0 +1,54 @@
+{
+  "run_id": "qwen__sharegpt__qv__powerlaw_global_a06__s42__n2500",
+  "checkpoint": 2500,
+  "task": "sharegpt",
+  "metrics": {
+    "heldout_nll": 0.9356238768187396,
+    "prometheus_absolute_score": 2.56,
+    "prometheus_judged_samples": 200,
+    "prometheus_unjudgeable_samples": 0
+  },
+  "sample_count": 200,
+  "prediction_artifact": "revision_experiments/results/evaluations/qwen__sharegpt__qv__powerlaw_global_a06__s42__n2500__step_002500__sharegpt_judged.jsonl",
+  "prediction_sha256": "c492efd0d0201cb0ec5a2102a8f5fac3a0cbe95741f1128ce06a3647ee83ebfb",
+  "candidate_artifact": "revision_experiments/results/evaluations/qwen__sharegpt__qv__powerlaw_global_a06__s42__n2500__step_002500__sharegpt_candidates.jsonl",
+  "candidate_sha256": "b4b91662c981265fbc06985186cb5c685c1889c825d4665b7f628d28d9f2d907",
+  "candidate_manifest_artifact": "revision_experiments/results/evaluations/qwen__sharegpt__qv__powerlaw_global_a06__s42__n2500__step_002500__sharegpt_candidates.manifest.json",
+  "candidate_manifest_sha256": "784f65e5464a29e0dfd7d97910ab70c093a587e6a5e9b237ea347289090eaf8a",
+  "judge_artifact": "revision_experiments/results/evaluations/qwen__sharegpt__qv__powerlaw_global_a06__s42__n2500__step_002500__sharegpt_judged.jsonl",
+  "judge_sha256": "c492efd0d0201cb0ec5a2102a8f5fac3a0cbe95741f1128ce06a3647ee83ebfb",
+  "sample_set_hash": "e19354783793c992fb5c6cc00a4db2819d535b2472ab0abf9cd55cfbbbd07a58",
+  "evaluation_config": {
+    "schema_version": 1,
+    "run_id": "qwen__sharegpt__qv__powerlaw_global_a06__s42__n2500",
+    "checkpoint": 2500,
+    "task": "sharegpt",
+    "protocol": {
+      "metrics": [
+        "heldout_nll",
+        "prometheus_absolute_score"
+      ],
+      "judge": "prometheus-7b-v2.0",
+      "judge_revision": "66ffb1fc20beebfb60a3964a957d9011723116c5",
+      "comparison_reference": "frozen_first_assistant_response",
+      "judge_prompt": "prometheus2_official_absolute_mistral_v1",
+      "score_range": [
+        1,
+        5
+      ],
+      "prompt_count": 200,
+      "sample_count": 200,
+      "sample_selection": "frozen_sharegpt_judge_prompt_manifest_order"
+    },
+    "dataset_split_hash": "25c61a9528f2cda38748440210a45f18115ac15791b5e7c2efbc06356b0ba212",
+    "sample_manifest": {
+      "sample_count": 200,
+      "ordered_sample_ids_sha256": "09932ca35b6daf0112452b8f033a0619ccbf1a9ca724b4c4d723dc413fe77321",
+      "ordered_sample_content_sha256": "8947a15f47e4591a851c4ec1502aac294dd4bcd5f65194f686af1e8261a23457"
+    }
+  },
+  "evaluation_config_hash": "02390e628248606f03b703ece5492561169260b37a44b291aa4f223c1efc6979",
+  "candidate_generation_seconds": 1764.7399367559992,
+  "judge_seconds": 1194.216639263992,
+  "evaluation_seconds": 2958.956576019991
+}

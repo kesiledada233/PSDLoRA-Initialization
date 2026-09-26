@@ -1,0 +1,16 @@
+{
+  "raw_auc500": 521.8769632130861,
+  "validation_auc500": 604.3908934595426,
+  "validation_final_loss": 1.1795025650245041,
+  "validation_guardrail_metric": "validation_loss",
+  "validation_guardrail_value": 1.1795025650245041,
+  "validation_examples_evaluated": 67,
+  "steps_logged": 500,
+  "train_examples": 268,
+  "validation_examples": 67,
+  "test_examples": 11582,
+  "effective_method": "pissa",
+  "effective_learning_rate": 2e-05,
+  "trainable_parameter_count": 5046272,
+  "initialization_seconds_total": 82.98192871501669
+}

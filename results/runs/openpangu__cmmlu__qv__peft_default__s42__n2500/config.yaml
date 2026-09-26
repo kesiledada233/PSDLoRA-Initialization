@@ -1,0 +1,26 @@
+effective_learning_rate: 5.0e-05
+effective_method: peft_default
+matrix: downstream_2500step
+max_steps: 2500
+method: peft_default
+model: openpangu
+run_id: openpangu__cmmlu__qv__peft_default__s42__n2500
+seed: 42
+target: qv
+target_modules: &id001
+- q_proj
+- v_proj
+task: cmmlu
+training:
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 5.0e-05
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_rank: 16
+  max_length: 512
+  precision: bf16
+  scheduler: cosine
+  target_modules: *id001
+  warmup_steps: 100
+  weight_decay: 0.01
