@@ -5,7 +5,7 @@ Training-free, data-free initialization for LoRA adapters. PSDLoRA synthesizes t
 ## What this repository contains
 
 - `revision_experiments/initializers/` — all initialization variants evaluated in the revision: power-law synthesis (alpha in {0.3, 0.6, 1.0}), scale-matched i.i.d., value permutation, flat spectrum (alpha = 0), row-/column-wise synthesis, and the PEFT-default baseline.
-- `experiments/` — corrected-pipeline training entry points (openPangu-Embedded-7B-V1.1 and Qwen2.5-7B) with proper label masking (causal shift; padding masked with ignore index -100), the ShareGPT training entry, the downstream evaluation harness (GSM8K exact match, CMMLU subject-macro accuracy, MBPP strict + name-adapted execution, ShareGPT held-out NLL + absolute judge), and the aggregation script.
+- `revision_experiments/scripts/` — the audited corrected pipeline used for every reported result: the training entry point `train_revision.py` (invoked by `run_matrix.py`), label masking in `training_support.py` (`labels[attention_mask == 0] = -100`, enforced by unit tests and execution gates), checkpoint evaluation (`evaluate_checkpoints.py`), and aggregation (`aggregate_results.py`). The superseded exploratory entry points are kept under `legacy/` for audit trail only.
 - `revision_experiments/config/` — paired-seed configurations (seeds 1107/123/42; initialization and training/data-order random streams separated so that, at a given seed, all methods share the same training randomness and data order).
 - `results/aggregate/` — the CSV/JSON tables underlying every table and figure of the revised manuscript: 48-trial equal-budget validation screening, three-seed endpoint metrics, construction-control matrix, initialization statistics audit, early-window PSD slopes, all-linear and extended-budget runs, paired-difference summaries, and the run inventory.
 - `results/runs/` — per-run artifacts for all runs: raw per-step training loss (`raw_loss.jsonl`), timing (`timing.jsonl`), per-run `config.yaml`, `initialization_stats.json`, `metadata.json`, and `summary.json`. Model checkpoints are not redistributed.
@@ -20,14 +20,13 @@ Python 3.10; see `requirements.txt`. Pinned environment: PEFT 0.17.1, Transforme
 ```bash
 pip install -r requirements.txt
 
-# Example: Qwen2.5/CMMLU, PSDLoRA (alpha = 0.6), seed 1107
-python experiments/train_qwen2.5_fda_lora_final.py --dataset cmmlu --init_preset powerlaw_global_a06 --fdt_alpha 0.6 --seed 1107 --max_iters 2500
+# Training (audited entry point; see argparse for matrix/config options)
+python revision_experiments/scripts/train_revision.py --help
+python revision_experiments/scripts/run_matrix.py --help
 
-# Downstream evaluation at a checkpoint
-python experiments/evaluate_downstream.py  # see argparse options for run/checkpoint selection
-
-# Regenerate all aggregate tables from the runs
-python experiments/collect_all_results.py
+# Checkpoint evaluation and aggregation
+python revision_experiments/scripts/evaluate_checkpoints.py --help
+python revision_experiments/scripts/aggregate_results.py
 ```
 
 ## Notes and scope
